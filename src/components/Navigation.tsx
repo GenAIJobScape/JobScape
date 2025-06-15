@@ -4,7 +4,7 @@ import CommonBtn from './CommonBtn';
 function NavBtn({ text, groupHover }: { text: string; groupHover?: boolean }) {
   return (
     <button
-      className={`p-[10px] font-semibold hover:text-[#3B48D3] text-[20px] ${groupHover ? 'group-hover:text-[#3b48D3]' : ''}`}
+      className={`p-[10px] text-black font-semibold hover:text-main text-[20px] ${groupHover ? 'group-hover:text-main' : ''}`}
     >
       {text}
     </button>

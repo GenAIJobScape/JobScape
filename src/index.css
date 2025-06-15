@@ -1,4 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-main: #3b48d3;
+  --color-black: #222222;
+}
 
 a,
 button {
