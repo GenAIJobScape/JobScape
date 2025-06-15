@@ -1,11 +1,9 @@
-import Navigation from "../../components/Navigation";
-import Test from "./Components/Test";
+import Footer from "../../components/Footer";
 
 function Main() {
   return (
     <>
-      <Navigation />
-      <Test />
+      <Footer />
     </>
   );
 }
