@@ -18,9 +18,6 @@ function JoinUs() {
 
   // 더미 컴포넌트
   const DummyComponent = () => {
-    joinUsUrls.map((data) => {
-      console.log(data);
-    });
     return (
       <div className="flex justify-center gap-[14px] mt-[52px] w-[309px] mx-auto whitespace-nowrap">
         {joinUsUrls.map((data) => (
