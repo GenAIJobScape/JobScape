@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CommonBtn from './CommonBtn';
 
@@ -32,11 +33,30 @@ function SubNavBtn({
 }
 
 function Navigation() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed w-full h-[110px] shadow-[0_2px_2px_0_rgba(0,0,0,0.1)] bg-white z-50">
+    <nav
+      className={`fixed w-full bg-white z-50 shadow-[0_2px_2px_0_rgba(0,0,0,0.1)] transition-all duration-300 ${
+        scrolled ? 'h-[70px]' : 'h-[110px]'
+      }`}
+    >
       <div className="max-w-[1395px] h-full mx-auto flex items-center justify-between">
         <h1 className="">
-          <Link to="/" className="text-[40px] font-bold leading-[58px]">
+          <Link
+            to="/"
+            className={`font-bold leading-[58px] transition-all duration-300 ${
+              scrolled ? 'text-[28px]' : 'text-[40px]'
+            }`}
+          >
             GenAIJobScape
           </Link>
         </h1>
@@ -46,7 +66,9 @@ function Navigation() {
           </li>
           <li className="relative group h-full flex items-center">
             <NavBtn text={'핵심 가설'} groupHover={true} />
-            <ul className="hidden absolute top-[110px] -left-[70px] group-hover:block py-5 rounded-2xl bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.1)] w-[270px]">
+            <ul
+              className={`hidden absolute -left-[70px] group-hover:block py-5 rounded-2xl bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.1)] w-[270px] ${scrolled ? 'top-[70px]' : 'top-[110px]'}`}
+            >
               <li className="h-16">
                 <SubNavBtn number="01." text="Test" to="" />
               </li>
