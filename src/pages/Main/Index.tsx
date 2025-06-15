@@ -1,11 +1,5 @@
-import Footer from "../../components/Footer";
-
 function Main() {
-  return (
-    <>
-      <Footer />
-    </>
-  );
+  return <></>;
 }
 
 export default Main;
