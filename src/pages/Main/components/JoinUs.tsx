@@ -22,7 +22,7 @@ function JoinUs() {
       console.log(data);
     });
     return (
-      <div className="flex justify-center gap-[14px] mt-[52px] w-[309px] mx-auto">
+      <div className="flex justify-center gap-[14px] mt-[52px] w-[309px] mx-auto whitespace-nowrap">
         {joinUsUrls.map((data) => (
           <CommonBtn
             key={data.key}
