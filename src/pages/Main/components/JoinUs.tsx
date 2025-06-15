@@ -1,4 +1,4 @@
-import CommonBtn from "../../../components/CommonBtn";
+import CommonBtn from '../../../components/CommonBtn';
 
 type object1 = {
   url: string;
@@ -9,11 +9,11 @@ type object1 = {
 function JoinUs() {
   const joinUsUrls: object1[] = [
     {
-      url: "https://github.com/GenAIJobScape/JobScape",
-      text: "기여하기",
+      url: 'https://github.com/GenAIJobScape/JobScape',
+      text: '기여하기',
       key: 0,
     },
-    { url: "#", text: "가설 제안하기", key: 1 },
+    { url: '#', text: '가설 제안하기', key: 1 },
   ];
 
   // 더미 컴포넌트
@@ -36,7 +36,7 @@ function JoinUs() {
 
   return (
     <section className="p-[60px] bg-[#ECEDF5] box-border">
-      <div className="flex flex-col justify-center align-middle w-[592px] gap-[16px] ml-auto mr-auto">
+      <div className="flex flex-col justify-center align-middle w-[592px] gap-[16px] mx-auto">
         <h2 className="font-semibold text-[32px] text-center">
           프로젝트에 참여하세요
         </h2>
