@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import CommonBtn from "./CommonBtn";
+import { Link } from 'react-router-dom';
+import CommonBtn from './CommonBtn';
 
 function Navigation() {
   return (
@@ -65,7 +65,7 @@ function Navigation() {
             </button>
           </li>
           <li className="flex items-center">
-            <CommonBtn text={"기여하기"} />
+            <CommonBtn text={'기여하기'} />
           </li>
         </ul>
       </div>
