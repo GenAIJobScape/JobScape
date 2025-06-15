@@ -1,14 +1,18 @@
+import externalLink from '../../../assets/external-link.svg';
 function Developer() {
   const DummyData = [1, 2, 3, 4, 5, 6, 7].map((key) => (
     <div key={key}>
-      <div className="w-[125px] h-[125px] border rounded-[50%]"></div>
+      <div className="w-[125px] h-[125px] border border-[#4D4D4D] rounded-[50%]"></div>
       <div className="mt-[16px]">
-        <p className="font-semibold text-[20px]/[140%] text-center">이호준</p>
+        <p className="font-semibold text-[20px]/[140%] text-center text-[#222222]">
+          {/* 개발진 이름 */}
+          이호준
+        </p>
         <div className="w-[24px] h-[24px] ml-auto mr-auto mt-[4px]">
           <a href="#">
             <img
-              className="w-[24px] h-[24px]"
-              src="#"
+              className="w-[24px] h-[24px] text-[#4D4D4D]"
+              src={externalLink}
               alt="개발자 깃허브 링크"
             />
           </a>
