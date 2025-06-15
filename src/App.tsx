@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/JobScape/" element={<Main />} />
       </Routes>
       <Footer />
     </Router>

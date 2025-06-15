@@ -33,7 +33,7 @@ function SubNavBtn({
 
 function Navigation() {
   return (
-    <nav className="fixed w-full h-[110px] shadow-[0_2px_2px_0_rgba(0,0,0,0.1)]">
+    <nav className="fixed w-full h-[110px] shadow-[0_2px_2px_0_rgba(0,0,0,0.1)] bg-white z-50">
       <div className="max-w-[1395px] h-full mx-auto flex items-center justify-between">
         <h1 className="">
           <Link to="/" className="text-[40px] font-bold leading-[58px]">
