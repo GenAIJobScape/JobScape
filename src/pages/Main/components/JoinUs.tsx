@@ -33,11 +33,11 @@ function JoinUs() {
 
   return (
     <section className="p-[60px] bg-[#ECEDF5] box-border">
-      <div className="flex flex-col justify-center align-middle w-[592px] gap-[16px] mx-auto">
+      <div className="flex flex-col justify-center align-middle gap-[16px] text-center">
         <h2 className="font-semibold text-[32px] text-center">
           프로젝트에 참여하세요
         </h2>
-        <p>
+        <p className="font-[400] text-[20px]/[140%] ">
           새로운 가설을 제안하거나, 데이터 분석 및 시각화 과정에 직접
           기여해주세요.
         </p>

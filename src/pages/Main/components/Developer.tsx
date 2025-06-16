@@ -2,7 +2,9 @@ import externalLink from '../../../assets/external-link.svg';
 function Developer() {
   const DummyData = [1, 2, 3, 4, 5, 6, 7].map((key) => (
     <div key={key}>
-      <div className="w-[125px] h-[125px] border border-[#4D4D4D] rounded-[50%]"></div>
+      <div className="w-[125px] h-[125px] border border-[#4D4D4D] rounded-[50%]">
+        <img src="#" alt="개발진 프로필 사진" className="hidden" />
+      </div>
       <div className="mt-[16px]">
         <p className="font-semibold text-[20px]/[140%] text-center text-[#222222]">
           {/* 개발진 이름 */}
