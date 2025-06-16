@@ -19,9 +19,17 @@ export default function Card({ number, title, desc, status }: CardProps) {
         h-[412px]
         rounded-[40px]
         bg-gradient-to-br from-[#3B48D3] to-[#B0DCFF]
+        // --마우스 호버 이벤트 추가--
+        hover:from-[#B0DCFF] hover:to-[#3B48D3]
+        hover:shadow-[4px_6px_6px_0px_rgba(0,0,0,0.3)]
+        hover:scale-105
+        // --마우스 호버 이벤트--
+        transition
+        duration-500
         px-[36px] py-[33px]
         flex flex-col gap-[64px]
         shadow-[2px_4px_4px_0px_rgba(0,0,0,0.1)]
+        
       "
     >
       <div>
