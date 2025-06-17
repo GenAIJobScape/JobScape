@@ -14,9 +14,11 @@ function CommonBtn({ href, target, rel, text }: BtnInterface) {
       href={href ? href : ''}
       target={target ? target : ''}
       rel={rel ? rel : ''}
-      className="px-[14px] border border-main rounded-[36px] h-12 flex items-center gap-[6px]"
+      className="px-[14px] border border-main rounded-[36px] h-12 flex items-center gap-[6px] max-md:h-8 max-md:px-[10px]"
     >
-      <span className="text-[20px] font-semibold text-main">{text}</span>
+      <span className="text-[20px] font-semibold text-main max-md:text-sm">
+        {text}
+      </span>
       <span className="w-6 h-6">
         <img
           src={
