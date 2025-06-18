@@ -55,12 +55,10 @@ const cardsData: CardProps[] = [
 export default function Hypothesis() {
   return (
     <section className="flex items-center flex-col justify-center w-full mb-[100px]">
-      <div className="flex flex-row w-full gap-[120px] items-center justify-center mb-[110px] ">
-        <div className="flex-1 h-[2px] bg-[#ddd]"></div>
-        <h2 className="text-[#3b48d3] text-[36px] font-bold leading-[58px] whitespace-nowrap flex-shrink-0">
+      <div className="text-center mb-[30px] md:mb-[76px] xl:mb-[132px] ">
+        <h2 className="text-[#3b48d3] text-[18px] md:text-[28px] xl:text-[36px] font-bold leading-[58px] whitespace-nowrap flex-shrink-0">
           핵심 가설
         </h2>
-        <div className="flex-1 h-[2px] bg-[#ddd]"></div>
       </div>
       <CardGrid cards={cardsData} />
     </section>
