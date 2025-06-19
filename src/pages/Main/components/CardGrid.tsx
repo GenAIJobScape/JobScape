@@ -1,18 +1,18 @@
 import Card from './Card';
-import type { CardProps } from './Card';
+import type { ICardProps } from './Card';
 
-interface CardGridProps {
-  cards: CardProps[];
+interface ICardGridProps {
+  cards: ICardProps[];
 }
 
-export default function CardGrid({ cards }: CardGridProps) {
+export default function CardGrid({ cards }: ICardGridProps) {
   return (
     <div
       className="
         grid
-        grid-cols-1 gap-[18px] 
-        md:grid-cols-2 md:gap[26px] 
-        xl:grid-cols-3 xl:gap-[84px]"
+        grid-cols-1 md:grid-cols-2 xl:grid-cols-3
+        gap-[18px] md:gap-[26px] xl:gap-[84px]
+        "
     >
       {cards.map((c) => (
         <Card key={c.number} {...c} />

@@ -1,9 +1,9 @@
 //분석 중 과 분석 완료 컴포넌트
-export interface StatusBadgeProps {
+export interface IStatusBadgeProps {
   status: '분석 중' | '분석 완료';
 }
 
-export default function StatusBadge({ status }: StatusBadgeProps) {
+export default function StatusBadge({ status }: IStatusBadgeProps) {
   //분석 중이면 핑크를, 아니면 그린을 보냄
   const stateColor = status === '분석 중' ? 'bg-[#FE76AA]' : 'bg-[#CFFF5E]';
 

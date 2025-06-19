@@ -3,49 +3,37 @@ import { Link } from 'react-router-dom';
 import StatusBadge from './StatusBadge.tsx';
 
 //카드에 입력할 내용 받아오는 부분 선언
-export interface CardProps {
+export interface ICardProps {
   number: string;
   title: string;
   desc: string;
   status: '분석 중' | '분석 완료';
 }
 //카드 함수 정의한 부분.
-export default function Card({ number, title, desc, status }: CardProps) {
+export default function Card({ number, title, desc, status }: ICardProps) {
   return (
     <Link
       to="/"
       className="
-        // --모바일--
-        w-[325px]
-        h-[40px] 
+        w-[325px] md:w-[280px] xl:w-[402px] 
+        h-[40px] md:h-[290px] xl:h-[412px]
         rounded-[40px]
         pl-[20px] pr-[14px] py-[12px]
-        flex justify-between
-
-        // --태블릿--
-        md:w-[280px]
-        md:h-[290px] 
         md:pt-[28px] md:px-[28px] md:pb-[52px]
-        md:flex-col md:justify-start md:gap-[70px]
-
-        // --데스크톱--
-        xl:w-[402px] 
-        xl:h-[412px]
         xl:px-[36px] xl:py-[33px]
-        xl:flex-col xl:gap-[64px]
+        flex justify-between
+        md:flex-col md:justify-start md:gap-[70px]
+        xl:flex-col xl:gap-[64px]        
 
         shadow-[2px_4px_4px_0px_rgba(0,0,0,0.1)]
         bg-gradient-to-br from-[#3B48D3] to-[#B0DCFF]
         
-        // --마우스 호버 이벤트 --
         hover:from-[#B0DCFF] hover:to-[#3B48D3]
         hover:shadow-[4px_6px_6px_0px_rgba(0,0,0,0.3)]
         hover:scale-105
 
         transition
         duration-200 md:duration-300 xl:duration-500
-        
-        
       "
     >
       <div
