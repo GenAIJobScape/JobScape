@@ -34,7 +34,7 @@ function JoinUs() {
   return (
     <section
       className="box-border w-full flex flex-col items-center xl:gap-[54px] md:gap-[33px] gap-[26px] xl:mb-[124px] md:mb-[120px] mb-[74px]
- xl:pt-[60px] md:pt-[36px] pt-[42px] xl:px-[724px] md:px-[148px] px-[90px] md:pb-[44px] pb-0 md:bg-[#ECEDF5] bg-[#FFFFFF]"
+ xl:pt-[60px] md:pt-[36px] pt-[42px] md:px-[148px] px-[90px] md:pb-[44px] pb-0 md:bg-[#ECEDF5] bg-[#FFFFFF]"
     >
       <div className="flex flex-col justify-center align-middle text-center xl:gap-[24px] md:gap-[14px] gap-[16px]">
         <h2 className="text-center md:font-[600] font-[500] xl:text-[24px] md:text-[22px] text-[14px]/[100%]">
