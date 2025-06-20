@@ -56,7 +56,7 @@ function Developer() {
   );
 
   return (
-    <section className="box-border flex flex-col items-center md:gap-[54px] gap-[16px] xl:mt-[124px] md:mt-[120px] mt-[74px] xl:pb-[224px] md:pb-[164px] pb-[100px]">
+    <section className="box-border flex flex-col items-center md:gap-[54px] gap-[16px]  xl:pb-[224px] md:pb-[164px] pb-[100px]">
       <h2 className="text-center text-[#222222] md:font-[600] font-[500] md:text-[18px]/[100%] text-[12px]/[100%] ">
         개발진
       </h2>
