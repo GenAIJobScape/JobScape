@@ -19,7 +19,7 @@ function JoinUs() {
   // 더미 컴포넌트
   const DummyComponent = () => {
     return (
-      <div className="flex justify-center gap-[14px] mt-[52px] w-[309px] mx-auto whitespace-nowrap">
+      <div className="flex justify-center whitespace-nowrap xl:gap-[18px] xl:w-[305px] gap-[10px]">
         {joinUsUrls.map((data) => (
           <CommonBtn
             key={data.key}
@@ -32,12 +32,12 @@ function JoinUs() {
   };
 
   return (
-    <section className="p-[60px] bg-[#ECEDF5] box-border">
-      <div className="flex flex-col justify-center align-middle gap-[16px] text-center">
-        <h2 className="font-semibold text-[32px] text-center">
+    <section className="box-border w-full flex flex-col items-center xl:gap-[54px] md:gap-[33px] gap-[26px] xl:py-[60px] md:pt-[36px] md:pb-[44px] pt-[42px] pb-[74px] md:bg-[#ECEDF5] bg-[#FFFFFF]">
+      <div className="flex flex-col justify-center align-middle text-center xl:gap-[24px] md:gap-[14px] gap-[16px]">
+        <h2 className="text-center md:font-[600] font-[500] xl:text-[24px] md:text-[22px] text-[14px]">
           프로젝트에 참여하세요
         </h2>
-        <p className="font-[400] text-[20px]/[140%] ">
+        <p className="md:font-[500] font-[400] md:text-[16px]/[140%] text-[12px]/[120%] ">
           새로운 가설을 제안하거나, 데이터 분석 및 시각화 과정에 직접
           기여해주세요.
         </p>
