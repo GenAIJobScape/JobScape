@@ -4,7 +4,7 @@ import CommonBtn from './CommonBtn';
 function NavBtn({ text, groupHover }: { text: string; groupHover?: boolean }) {
   return (
     <button
-      className={`p-[10px] text-black font-semibold hover:text-main text-[20px] ${groupHover ? 'group-hover:text-main' : ''}  max-[1396px]:text-base`}
+      className={`p-[10px] text-black font-semibold hover:text-main text-[20px] ${groupHover ? 'group-hover:text-main' : ''}  max-xl:text-base`}
     >
       {text}
     </button>
@@ -36,16 +36,16 @@ function Navigation() {
     <nav
       className={`fixed w-full bg-white z-50 shadow-[0_2px_2px_0_rgba(0,0,0,0.1)] transition-all duration-300 h-[70px] max-sm:h-[60px]`}
     >
-      <div className="max-w-[1396px] h-full mx-auto flex items-center justify-between max-[1396px]:px-7 max-sm:px-5">
+      <div className="max-w-[1396px] h-full mx-auto flex items-center justify-between max-[1436px]:px-7 max-sm:px-5">
         <h1 className="">
           <Link
             to="/"
-            className={`font-bold leading-[58px] transition-all duration-300 text-[36px] w-[294px] block text-center max-[1396px]:w-[202px] max-[1396px]:leading-11 max-[1396px]:text-2xl`}
+            className={`font-bold leading-[58px] transition-all duration-300 text-[36px] w-[294px] block text-center max-xl:w-[202px] max-xl:leading-11 max-xl:text-2xl`}
           >
             GenAIJobScape
           </Link>
         </h1>
-        <ul className="flex gap-[78px] h-full max-[1396px]:gap-6 max-sm:hidden">
+        <ul className="flex gap-[78px] h-full max-xl:gap-6 max-sm:hidden">
           <li className="flex items-center">
             <NavBtn text={'개요'} />
           </li>
