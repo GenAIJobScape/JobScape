@@ -36,7 +36,7 @@ function Navigation() {
     <nav
       className={`fixed w-full bg-white z-50 shadow-[0_2px_2px_0_rgba(0,0,0,0.1)] transition-all duration-300 h-[70px]`}
     >
-      <div className="max-w-[1396px] h-full mx-auto flex items-center justify-between max-[1396px]:px-7">
+      <div className="max-w-[1396px] h-full mx-auto flex items-center justify-between max-[1396px]:px-7 max-sm:px-5">
         <h1 className="">
           <Link
             to="/"
@@ -45,7 +45,7 @@ function Navigation() {
             GenAIJobScape
           </Link>
         </h1>
-        <ul className="flex gap-[78px] h-full max-[1396px]:gap-6">
+        <ul className="flex gap-[78px] h-full max-[1396px]:gap-6 max-sm:hidden">
           <li className="flex items-center">
             <NavBtn text={'개요'} />
           </li>
