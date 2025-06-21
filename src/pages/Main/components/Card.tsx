@@ -15,7 +15,7 @@ export default function Card({ number, title, desc, status }: ICardProps) {
     <Link
       to="/"
       className="
-        w-[325px] md:w-[280px] xl:w-[402px] 
+        w-[325px] md:w-[280px] xl:w-[402px]
         h-[40px] md:h-[290px] xl:h-[412px]
         rounded-[40px]
         pl-[20px] pr-[14px] py-[12px]
@@ -23,7 +23,7 @@ export default function Card({ number, title, desc, status }: ICardProps) {
         xl:px-[36px] xl:py-[33px]
         flex justify-between
         md:flex-col md:justify-start md:gap-[70px]
-        xl:flex-col xl:gap-[64px]        
+        xl:flex-col xl:gap-[64px]
 
         shadow-[2px_4px_4px_0px_rgba(0,0,0,0.1)]
         bg-gradient-to-br from-[#3B48D3] to-[#B0DCFF]
@@ -51,8 +51,6 @@ export default function Card({ number, title, desc, status }: ICardProps) {
           font-['Pretendard Variable'] 
           font-bold 
           mix-blend-overlay 
-
-    
         "
         >
           {number}

@@ -19,7 +19,7 @@ export default function Why() {
       leading-[58px] 
       whitespace-nowrap 
       flex-shrink-0 
-      mt-[200px] 
+      mt-[50px] md:mt-[120px] xl:mt-[240px]
       text-center"
       >
         왜 개발했나요?
