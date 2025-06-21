@@ -34,7 +34,7 @@ function SubNavBtn({
 function Navigation() {
   return (
     <nav
-      className={`fixed w-full bg-white z-50 shadow-[0_2px_2px_0_rgba(0,0,0,0.1)] transition-all duration-300 h-[70px]`}
+      className={`fixed w-full bg-white z-50 shadow-[0_2px_2px_0_rgba(0,0,0,0.1)] transition-all duration-300 h-[70px] max-sm:h-[60px]`}
     >
       <div className="max-w-[1396px] h-full mx-auto flex items-center justify-between max-[1396px]:px-7 max-sm:px-5">
         <h1 className="">
