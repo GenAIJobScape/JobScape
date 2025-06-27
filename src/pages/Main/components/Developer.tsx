@@ -24,15 +24,15 @@ const dummyData1: developes = {
 
 function Developer() {
   const dummy = (data: personItem[], role: string) => (
-    <div className="flex md:gap-[58px] gap-[24px] md:text-[16px]/[100%] text-[10px]/[100%]">
-      <h3 className="text-[#728CE8] md:font-[500] text-right md:w-[74px] w-[50px]">
+    <div className="flex md:gap-[24px] gap-[16px] md:text-[16px]/[100%] text-[10px]/[100%]">
+      <h3 className="text-[#728CE8] font-[500] md:text-left text-right md:w-auto w-[50px]">
         {role}
       </h3>
-      <div className="flex md:gap-[54px] gap-[30px]">
+      <div className="flex">
         {data.map((people: personItem, i: number) => (
           <p
             key={people.key}
-            className={`relative ${i !== 0 ? "before:content-[''] before:block before:w-[4px] before:h-[4px] before:rounded-[50%] before:bg-[#D9D9D9] before:absolute before:top-[50%] before:translate-[-50%] md:before:left-[-25px] before:left-[-13px]" : ''}`}
+            className={`relative text-[#94A3B8] ${i !== 0 ? "before:content-[''] before:block before:w-[4px] before:h-[4px] before:rounded-[50%] before:bg-[#505050] before:absolute before:top-[50%] before:translate-[-50%] md:before:left-[12px] before:left-[6px] md:pl-[28px] pl-[16px]" : ''}`}
           >
             {people.name}
           </p>
@@ -42,11 +42,11 @@ function Developer() {
   );
 
   return (
-    <section className="box-border flex flex-col items-center md:gap-[54px] gap-[16px]  xl:pb-[224px] md:pb-[164px] pb-[100px]">
-      <h2 className="text-center text-[#222222] md:font-[600] font-[500] md:text-[18px]/[100%] text-[12px]/[100%] ">
+    <section className="box-border flex flex-col items-center bg-[#1E293B] xl:gap-[40px] md:gap-[26px] gap-[18px] xl:pt-[70px] xl:pb-[76px] md:py-[60px] py-[24px]">
+      <h2 className="text-center text-[#E1E1E1] font-[500] md:text-[18px]/[100%] text-[12px]/[100%] ">
         개발진
       </h2>
-      <div className="flex flex-col items-start gap-[25px] w-max">
+      <div className="flex md:flex-row flex-col items-start xl:gap-[60px] md:gap-[40px] gap-[16px] w-max">
         {dummy(dummyData1.DA, '데이터분석')}
         {dummy(dummyData1.FE, '프론트엔드')}
         {dummy(dummyData1.Designer, '디자인')}
