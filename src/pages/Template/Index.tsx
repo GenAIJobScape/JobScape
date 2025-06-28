@@ -5,6 +5,7 @@ function Template() {
   return (
     <>
       <Navigation />
+      <main className="pt-[70px]">{/* 컨텐츠 내용 */}</main>
       <Footer />
     </>
   );
