@@ -60,7 +60,7 @@ export default function Hypothesis() {
     items-center 
     flex-col 
     justify-center 
-    w-[100vw]
+    w-full
     mb-[100px]
     "
     >
