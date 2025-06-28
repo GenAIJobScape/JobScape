@@ -10,7 +10,7 @@ function DevelopApp() {
       <Navigation />
       <Routes>
         <Route path="/JobScape/" element={<Main />} />
-        <Route path="/test" element={<TestPage />} />
+        <Route path="/JobScape/test" element={<TestPage />} />
       </Routes>
       <Footer />
     </Router>
