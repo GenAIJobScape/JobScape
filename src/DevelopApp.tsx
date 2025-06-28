@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Main from './pages/Main/Index';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import TestPage from './pages/TestPage';
+import Template from './pages/Template/Index';
 
 function DevelopApp() {
   return (
@@ -10,7 +10,7 @@ function DevelopApp() {
       <Navigation />
       <Routes>
         <Route path="/JobScape/" element={<Main />} />
-        <Route path="/JobScape/test" element={<TestPage />} />
+        <Route path="/JobScape/template" element={<Template />} />
       </Routes>
       <Footer />
     </Router>
