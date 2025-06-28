@@ -1,14 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JobScape</title>
-    <script type="module" crossorigin src="/assets/index-BXUX7xaF.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-1uh0djRJ.css">
+    <script type="module" crossorigin src="/assets/index-Df92aMRC.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CvfI5_Lu.css">
   </head>
   <body>
     <div id="root"></div>
+    <script type="text/javascript">
+      // GitHub Pages SPA 라우팅 지원
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
   </body>
 </html>
