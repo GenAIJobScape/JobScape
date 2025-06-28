@@ -4,7 +4,7 @@ import CommonBtn from './CommonBtn';
 function NavBtn({ text, groupHover }: { text: string; groupHover?: boolean }) {
   return (
     <button
-      className={`p-[10px] text-black font-semibold hover:text-main text-[20px] ${groupHover ? 'group-hover:text-main' : ''}  max-xl:text-base`}
+      className={`p-[10px] text-[#64748B] font-medium hover:text-main hover:font-bold text-[18px] ${groupHover ? 'group-hover:text-main' : ''}  max-xl:text-base`}
     >
       {text}
     </button>
@@ -42,7 +42,7 @@ function Navigation() {
             to="/"
             className={`font-bold leading-[58px] transition-all duration-300 text-[36px] w-[294px] block text-center max-xl:w-[202px] max-xl:leading-11 max-xl:text-2xl`}
           >
-            GenAIJobScape
+            JobAIScape
           </Link>
         </h1>
         <ul className="flex gap-[78px] h-full max-xl:gap-6 max-sm:hidden">
@@ -71,10 +71,8 @@ function Navigation() {
           <li className="flex items-center">
             <NavBtn text="개발진" />
           </li>
-          <li className="flex items-center">
-            <CommonBtn text={'기여하기'} />
-          </li>
         </ul>
+        <CommonBtn text={'기여하기'} />
       </div>
     </nav>
   );
