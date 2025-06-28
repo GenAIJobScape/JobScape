@@ -1,36 +1,31 @@
 import CommonBtn from '../../../components/CommonBtn';
 
-type object1 = {
+interface Iobject1 {
   url: string;
   text: string;
   key: number;
-};
+}
+
+const joinUsUrls: Iobject1[] = [
+  {
+    url: 'https://github.com/GenAIJobScape/JobScape',
+    text: '기여하기',
+    key: 0,
+  },
+  { url: '#', text: '가설 제안하기', key: 1 },
+];
+
+function InteractionEl() {
+  return (
+    <div className="flex justify-center whitespace-nowrap xl:gap-[18px] xl:w-[305px] gap-[10px]">
+      {joinUsUrls.map((data) => (
+        <CommonBtn key={data.key} href={data.url} text={data.text}></CommonBtn>
+      ))}
+    </div>
+  );
+}
 
 function JoinUs() {
-  const joinUsUrls: object1[] = [
-    {
-      url: 'https://github.com/GenAIJobScape/JobScape',
-      text: '기여하기',
-      key: 0,
-    },
-    { url: '#', text: '가설 제안하기', key: 1 },
-  ];
-
-  // 더미 컴포넌트
-  const DummyComponent = () => {
-    return (
-      <div className="flex justify-center whitespace-nowrap xl:gap-[18px] xl:w-[305px] gap-[10px]">
-        {joinUsUrls.map((data) => (
-          <CommonBtn
-            key={data.key}
-            href={data.url}
-            text={data.text}
-          ></CommonBtn>
-        ))}
-      </div>
-    );
-  };
-
   return (
     <section
       className="box-border w-full flex flex-col items-center xl:gap-[54px] md:gap-[33px] gap-[26px] xl:mb-[124px] md:mb-[120px] mb-[74px]
@@ -45,7 +40,7 @@ function JoinUs() {
           기여해주세요.
         </p>
       </div>
-      <DummyComponent />
+      <InteractionEl />
     </section>
   );
 }
