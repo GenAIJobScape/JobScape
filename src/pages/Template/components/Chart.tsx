@@ -105,7 +105,7 @@ const Chart = () => {
     ],
   };
   return (
-    <div className="w-full h-[200px] sm:h-[330px] xl:h-[666px]  mt-[30px] sm:mt-[64px] px-[20%] py-[5%] m-auto bg-white">
+    <div className="w-full h-[200px] sm:h-[330px] xl:h-[666px]  mt-[30px] sm:mt-[64px] mb-[80px] sm:mb-[140px] xl:mb-[158px] px-[20%] py-[5%] m-auto bg-white">
       <Bar data={data} options={options} />
     </div>
   );
