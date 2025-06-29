@@ -1,5 +1,5 @@
 import { Bar } from 'react-chartjs-2';
-import { TitleData } from '../../../data/templateData';
+import { TitleData } from '../data/templateData';
 
 import {
   Chart as ChartJS,
@@ -90,7 +90,7 @@ interface IChartDataType {
   color: string[];
 } //차트 타입 지정
 
-const Chart = () => {
+const BarChart = () => {
   const chartData: IChartDataType = TitleData.chartData;
   const data = {
     labels: chartData.labels,
@@ -111,4 +111,4 @@ const Chart = () => {
   );
 };
 
-export default Chart;
+export default BarChart;
