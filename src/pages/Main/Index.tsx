@@ -5,7 +5,7 @@ import JoinUs from './components/JoinUs';
 
 function Main() {
   return (
-    <div className="pt-[70px]">
+    <div className="pt-[70px] max-sm:pt-[46px]">
       <Why />
       <Hypothesis />
       <JoinUs />

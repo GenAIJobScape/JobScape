@@ -25,8 +25,10 @@ function SubNavBtn({
       to={to ? to : ''}
       className="w-full h-full flex gap-5 hover:bg-[#F1F3FF] px-7 items-center"
     >
-      <span className="font-medium text-[18px]">{number}</span>
-      <span className="font-medium text-[18px]">{text}</span>
+      <span className="font-medium text-[18px] text-[#A2A3B5] max-md:text-[16px]">
+        {number}
+      </span>
+      <span className="font-medium text-[18px] max-md:text-[16px]">{text}</span>
     </Link>
   );
 }
@@ -34,7 +36,7 @@ function SubNavBtn({
 function Navigation() {
   return (
     <nav
-      className={`fixed w-full bg-white z-50 shadow-[0_2px_2px_0_rgba(0,0,0,0.1)] transition-all duration-300 h-[70px] max-sm:h-[60px]`}
+      className={`fixed w-full bg-white z-50 shadow-[0_2px_2px_0_rgba(0,0,0,0.1)] transition-all duration-300 h-[70px] max-sm:h-[46px]`}
     >
       <div className="max-w-[1396px] h-full mx-auto flex items-center justify-between max-[1436px]:px-7 max-sm:px-5">
         <h1 className="">
@@ -72,7 +74,9 @@ function Navigation() {
             <NavBtn text="개발진" />
           </li>
         </ul>
-        <CommonBtn text={'기여하기'} />
+        <div className="max-sm:hidden">
+          <CommonBtn text={'기여하기'} />
+        </div>
       </div>
     </nav>
   );
