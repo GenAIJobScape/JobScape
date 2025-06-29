@@ -3,6 +3,8 @@ import Developer from '../Main/components/Developer';
 import JoinUs from '../Main/components/JoinUs';
 import ContentBlock from './components/ContentBlock';
 import HypothesisTitle from './components/HypothesisTitle';
+import LineChart from '../../components/LineChart';
+import PieChart from '../../components/PieChart';
 
 function Template() {
   return (
@@ -13,6 +15,10 @@ function Template() {
           {/* 컨텐츠 내용 */}
           <HypothesisTitle />
           <ContentBlock />
+          <>
+            <LineChart />
+            <PieChart />
+          </>
         </div>
         <JoinUs />
         <Developer />
