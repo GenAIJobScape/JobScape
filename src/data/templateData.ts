@@ -1,4 +1,4 @@
-import type { IContent } from '../pages/Template/components/ContentBlock';
+import type { IContent } from '../components/ContentBlock';
 
 export const TitleData = {
   number: '01',

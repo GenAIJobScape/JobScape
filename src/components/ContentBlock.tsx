@@ -1,4 +1,4 @@
-import { dummyData } from '../../../data/templateData';
+import { dummyData } from '../data/templateData';
 type Data = string | IList[];
 
 type ListItemProps = {
