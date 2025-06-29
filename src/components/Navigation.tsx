@@ -1,9 +1,19 @@
 import { Link } from 'react-router-dom';
 import CommonBtn from './CommonBtn';
+import arrowLeft from '../assets/arrow-left.svg';
 
-function NavBtn({ text, groupHover }: { text: string; groupHover?: boolean }) {
+function NavBtn({
+  text,
+  groupHover,
+  onClick,
+}: {
+  text: string;
+  groupHover?: boolean;
+  onClick?: () => void;
+}) {
   return (
     <button
+      onClick={onClick}
       className={`p-[10px] text-[#64748B] font-medium hover:text-main hover:font-bold text-[18px] ${groupHover ? 'group-hover:text-main' : ''}  max-xl:text-base`}
     >
       {text}
@@ -33,12 +43,40 @@ function SubNavBtn({
   );
 }
 
-function Navigation() {
+function Navigation({ backBtn }: { backBtn?: boolean }) {
+  // 개요 버튼 클릭 핸들러 (실시간 화면 크기 체크)
+  const handleOverviewClick = () => {
+    const isMobile = window.innerWidth < 1396;
+    const scrollAmount = isMobile ? 30 : 200;
+
+    window.scrollTo({
+      top: scrollAmount,
+      behavior: 'smooth',
+    });
+  };
+
+  // 개발진 버튼 클릭 핸들러
+  const handleDeveloperClick = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <nav
       className={`fixed w-full bg-white z-50 shadow-[0_2px_2px_0_rgba(0,0,0,0.1)] transition-all duration-300 h-[70px] max-sm:h-[46px]`}
     >
       <div className="max-w-[1396px] h-full mx-auto flex items-center justify-between max-[1436px]:px-7 max-sm:px-5">
+        {backBtn && (
+          <button className="w-7 h-7 hidden max-sm:block">
+            <img
+              src={arrowLeft}
+              alt="back button"
+              className="block w-full h-full"
+            />
+          </button>
+        )}
         <h1 className="">
           <Link
             to="/"
@@ -49,7 +87,7 @@ function Navigation() {
         </h1>
         <ul className="flex gap-[78px] h-full max-xl:gap-6 max-sm:hidden">
           <li className="flex items-center">
-            <NavBtn text={'개요'} />
+            <NavBtn text={'개요'} onClick={handleOverviewClick} />
           </li>
           <li className="relative group h-full flex items-center">
             <NavBtn text={'핵심 가설'} groupHover={true} />
@@ -71,7 +109,7 @@ function Navigation() {
             </ul>
           </li>
           <li className="flex items-center">
-            <NavBtn text="개발진" />
+            <NavBtn text="개발진" onClick={handleDeveloperClick} />
           </li>
         </ul>
         <div className="max-sm:hidden">
