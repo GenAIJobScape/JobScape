@@ -5,6 +5,7 @@ import ContentBlock from './components/ContentBlock';
 import HypothesisTitle from './components/HypothesisTitle';
 import LineChart from '../../components/LineChart';
 import PieChart from '../../components/PieChart';
+import Chart from '../Template/components/chart';
 
 function Template() {
   return (
@@ -16,6 +17,7 @@ function Template() {
           <HypothesisTitle />
           <ContentBlock />
           <>
+            <Chart />
             <LineChart />
             <PieChart />
           </>
