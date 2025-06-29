@@ -1,6 +1,5 @@
 import { Bar } from 'react-chartjs-2';
 import { TitleData } from '../data/templateData';
-
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,17 +9,20 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import type { Plugin, ChartOptions } from 'chart.js';
 
 // 범례와 차트 사이 간격을 만드는 플러그인
-const legendMarginPlugin = {
+const legendMarginPlugin: Plugin<'bar'> = {
   id: 'legendMargin',
-  beforeInit(chart: any) {
-    const originalFit = chart.legend.fit;
-    chart.legend.fit = function fit() {
-      originalFit.bind(chart.legend)();
-      // 범례 영역 아래쪽에 마진 추가
-      this.height += 37;
-    };
+  beforeInit(chart: ChartJS<'bar'>) {
+    const originalFit = chart.legend?.fit;
+    if (chart.legend && originalFit) {
+      chart.legend.fit = function fit() {
+        originalFit.bind(chart.legend)();
+        // 범례 영역 아래쪽에 마진 추가
+        this.height += 37;
+      };
+    }
   },
 };
 
@@ -34,14 +36,11 @@ ChartJS.register(
   legendMarginPlugin
 );
 
-const options = {
+const options: ChartOptions<'bar'> = {
   responsive: true,
   maintainAspectRatio: false,
   aspectRatio: 4 / 3,
-  plugins: {
-    legendMargin: {},
-  },
-
+  plugins: {},
   scales: {
     x: {
       grid: {
@@ -73,14 +72,13 @@ const options = {
         font: {
           size: 11,
         },
-        callback: function (value: any) {
-          // 타입 명시
-          return value.toLocaleString();
+        callback: function (value: string | number) {
+          return Number(value).toLocaleString();
         },
       },
     },
   },
-} as any;
+};
 
 interface IChartDataType {
   title: string;
@@ -88,10 +86,11 @@ interface IChartDataType {
   labels: (string | number)[];
   values: number[];
   color: string[];
-} //차트 타입 지정
+}
 
 const BarChart = () => {
   const chartData: IChartDataType = TitleData.chartData;
+
   const data = {
     labels: chartData.labels,
     datasets: [
@@ -104,8 +103,9 @@ const BarChart = () => {
       },
     ],
   };
+
   return (
-    <div className="w-full h-[200px] sm:h-[330px] xl:h-[666px]  mt-[30px] sm:mt-[64px] mb-[80px] sm:mb-[140px] xl:mb-[158px] px-[20%] py-[5%] m-auto bg-white">
+    <div className="w-full h-[200px] sm:h-[330px] xl:h-[666px] mt-[30px] sm:mt-[64px] mb-[80px] sm:mb-[140px] xl:mb-[158px] px-[20%] py-[5%] m-auto bg-white">
       <Bar data={data} options={options} />
     </div>
   );

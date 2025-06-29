@@ -98,7 +98,7 @@ function LineChart({ data, options }: LineChartProps) {
   };
 
   return (
-    <div className="w-full aspect-[1240/666] pt-[64px]">
+    <div className="w-full aspect-[1240/666] mt-[64px] bg-white p-[62px]">
       <Line data={data || defaultData} options={options || defaultOptions} />
     </div>
   );
