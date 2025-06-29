@@ -1,3 +1,6 @@
+import Developer from '../Main/components/Developer';
+import JoinUs from '../Main/components/JoinUs';
+import ContentBlock from './components/ContentBlock';
 import HypothesisTitle from './components/HypothesisTitle';
 
 function Template() {
@@ -6,7 +9,10 @@ function Template() {
       <div className="mx-auto xl:max-w-[1240px] max-md:max-w-[624px] max-sm:px-[60px]">
         {/* 컨텐츠 내용 */}
         <HypothesisTitle />
+        <ContentBlock />
       </div>
+      <JoinUs />
+      <Developer />
     </main>
   );
 }
