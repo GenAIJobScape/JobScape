@@ -1,3 +1,5 @@
+import type { IContent } from '../pages/Template/components/ContentBlock';
+
 export const TitleData = {
   number: '01',
   title: '공급 수요 불균형 가설',
@@ -11,7 +13,7 @@ export const TitleData = {
   },
 };
 
-export const dummyData = {
+export const dummyData: IContent = {
   id: 'c1',
   title: '수요 분석',
   contents: [
@@ -79,7 +81,8 @@ export const dummyData = {
         },
         {
           id: 'b3i7',
-          type: 'ul',
+          // ol 테스트용
+          type: 'ol',
           data: [
             {
               id: 'b3i7u1',
