@@ -1,4 +1,4 @@
-import type { IContent } from '../components/ContentBlock';
+import type { IContent } from './dataType';
 
 export const TitleData = {
   number: '01',

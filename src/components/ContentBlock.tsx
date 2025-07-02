@@ -1,37 +1,9 @@
+import type {
+  IContentBlock,
+  IContentData,
+  ListItemProps,
+} from '../data/dataType';
 import { dummyData } from '../data/templateData';
-type Data = string | IList[];
-
-type ListItemProps = {
-  id: string;
-  children: React.ReactNode;
-  isOrd: boolean;
-  ord?: number;
-};
-
-interface Iid {
-  id: string;
-}
-interface ITitle extends Iid {
-  title: string;
-}
-interface IList extends Iid {
-  item: string;
-}
-
-// 세부 내용 블럭
-interface IContentData {
-  id: string;
-  type: 'text' | 'ol' | 'ul';
-  data: Data;
-}
-// 내용 블럭
-interface IContentBlock extends ITitle {
-  contents: IContentData[];
-}
-// 검증 블럭
-export interface IContent extends ITitle {
-  contents: IContentBlock[];
-}
 
 function ListItem(props: ListItemProps) {
   const olStyle = `ps-[30px] [counter-increment:my-ol] before:content-[counter(my-ol)'.'] before:w-[18px] before:top-0 before:left-0 before:text-[#64748B] before:font-medium before:text-center`;
@@ -90,12 +62,12 @@ function ContentBlock() {
           {dummyData.title}
         </h3>
         <div className="flex flex-col md:gap-[64px] gap-[40px]">
-          {dummyData.contents.map((block) => (
+          {dummyData.contents.map((block: IContentBlock) => (
             <div key={block.id} className="flex flex-col gap-[14px]">
               <h4 className="text-[#3B48D3] leading-[140%] md:font-semibold font-medium xl:text-[24px] md:text-[20px] text-[18px]">
                 {block.title}
               </h4>
-              {block.contents.map((item) => (
+              {block.contents.map((item: IContentData) => (
                 <div
                   key={item.id}
                   className="leading-[140%] md:font-normal font-light xl:text-[18px] md:text-[16px] text-[14px]"
