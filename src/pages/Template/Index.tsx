@@ -6,6 +6,12 @@ import HypothesisTitle from '../../components/HypothesisTitle';
 import LineChart from '../../components/LineChart';
 import PieChart from '../../components/PieChart';
 import BarChart from '../../components/BarChart';
+import {
+  dummyDataProps,
+  dummyData2Props,
+  dummyData3Props,
+  dummyData4Props,
+} from '../../data/templateData';
 
 function Template() {
   return (
@@ -15,7 +21,10 @@ function Template() {
         <div className="mx-auto xl:max-w-[1240px] max-md:max-w-[624px] max-sm:px-[60px]">
           {/* 컨텐츠 내용 */}
           <HypothesisTitle />
-          <ContentBlock />
+          <ContentBlock {...dummyDataProps} />
+          <ContentBlock {...dummyData2Props} />
+          <ContentBlock {...dummyData3Props} />
+          <ContentBlock {...dummyData4Props} />
           <>
             <BarChart />
             <LineChart />

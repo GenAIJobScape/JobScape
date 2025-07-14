@@ -38,3 +38,8 @@ export interface IContentBlock extends ITitle {
 export interface IContent extends ITitle {
   contents: IContentBlock[];
 }
+
+export interface IContentProps {
+  title?: string;
+  data: IContent;
+}

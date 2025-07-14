@@ -1,9 +1,9 @@
 import type {
   IContentBlock,
   IContentData,
+  IContentProps,
   ListItemProps,
 } from '../data/dataType';
-import { dummyData } from '../data/templateData';
 
 function ListItem(props: ListItemProps) {
   const olStyle = `ps-[30px] [counter-increment:my-ol] before:content-[counter(my-ol)'.'] before:w-[18px] before:top-0 before:left-0 before:text-[#64748B] before:font-medium before:text-center`;
@@ -49,20 +49,21 @@ function Content(props: IContentData) {
 }
 
 /** 블럭 컴포넌트 */
-function ContentBlock() {
+function ContentBlock(props: IContentProps) {
   //
-  const dummyBlockTitle = '가설 검증 🔍';
   return (
     <section className="text-[#1E293B] xl:mt-[124px] md:mt-[94px] mt-[74px]">
-      <h2 className="font-bold leading-[100%] xl:text-[36px] md:text-[32px] text-[22px]">
-        {dummyBlockTitle}
-      </h2>
+      {props.title !== undefined ? (
+        <h2 className="font-bold leading-[100%] xl:text-[36px] md:text-[32px] text-[22px]">
+          {props.title}
+        </h2>
+      ) : null}
       <div className="flex flex-col md:gap-[54px] gap-[28px] xl:mt-[76px] md:mt-[64px] mt-[50px] ">
         <h3 className="leading-[100%] md:font-bold font-semibold xl:text-[32px] md:text-[28px] text-[20px]">
-          {dummyData.title}
+          {props.data.title}
         </h3>
         <div className="flex flex-col md:gap-[64px] gap-[40px]">
-          {dummyData.contents.map((block: IContentBlock) => (
+          {props.data.contents.map((block: IContentBlock) => (
             <div key={block.id} className="flex flex-col gap-[14px]">
               <h4 className="text-[#3B48D3] leading-[140%] md:font-semibold font-medium xl:text-[24px] md:text-[20px] text-[18px]">
                 {block.title}
