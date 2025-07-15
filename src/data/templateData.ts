@@ -1,6 +1,6 @@
 import type { IContent, IContentProps } from './dataType';
 
-export const TitleData = {
+export const TitleData2 = {
   number: '01',
   title: '공급 수요 불균형 가설',
   summary: {
