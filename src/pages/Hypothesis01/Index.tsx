@@ -1,7 +1,7 @@
 import HypothesisTitle from '../../components/HypothesisTitle';
 import Navigation from '../../components/Navigation';
 import PageLayout from '../../components/PageLayout';
-import { TitleData } from '../../data/hypothesisData01';
+import { TitleData } from '../../data/hypothesis01';
 
 function Hypothesis01() {
   return (

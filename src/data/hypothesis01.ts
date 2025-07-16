@@ -1,4 +1,4 @@
-import type { IHypothesisTitle } from './dataType';
+import type { IHypothesisTitle } from '../types/IHypothesisTitle';
 
 export const TitleData: IHypothesisTitle = {
   number: '01',

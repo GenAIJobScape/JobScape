@@ -1,5 +1,4 @@
 import { Bar } from 'react-chartjs-2';
-import { TitleData } from '../data/templateData';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,6 +9,16 @@ import {
   Legend,
 } from 'chart.js';
 import type { Plugin, ChartOptions } from 'chart.js';
+
+const tempTitleData = {
+  chartData: {
+    title: '임시 차트',
+    label: '데이터',
+    labels: ['A', 'B', 'C', 'D'],
+    values: [10, 20, 30, 40],
+    color: ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4'],
+  },
+};
 
 // 범례와 차트 사이 간격을 만드는 플러그인
 const legendMarginPlugin: Plugin<'bar'> = {
@@ -89,7 +98,7 @@ interface IChartDataType {
 }
 
 const BarChart = () => {
-  const chartData: IChartDataType = TitleData.chartData;
+  const chartData: IChartDataType = tempTitleData.chartData;
 
   const data = {
     labels: chartData.labels,
