@@ -1,7 +1,7 @@
 import type {
-  IContentBlock,
-  IContentData,
-  IContentProps,
+  IHypothesisContentBlock,
+  IHypothesisContentData,
+  IHypothesisContentProps,
   ListItemProps,
 } from '../data/dataType';
 
@@ -19,7 +19,7 @@ function ListItem(props: ListItemProps) {
 }
 
 /**문단 또는 리스트 컴포넌트 */
-function Content(props: IContentData) {
+function Content(props: IHypothesisContentData) {
   const { type, data } = props;
 
   if (type === 'text' && typeof data === 'string') {
@@ -49,7 +49,7 @@ function Content(props: IContentData) {
 }
 
 /** 블럭 컴포넌트 */
-function ContentBlock(props: IContentProps) {
+function ContentBlock(props: IHypothesisContentProps) {
   //
   return (
     <section className="text-[#1E293B] xl:mt-[124px] md:mt-[94px] mt-[74px]">
@@ -63,12 +63,12 @@ function ContentBlock(props: IContentProps) {
           {props.data.title}
         </h3>
         <div className="flex flex-col md:gap-[64px] gap-[40px]">
-          {props.data.contents.map((block: IContentBlock) => (
+          {props.data.contents.map((block: IHypothesisContentBlock) => (
             <div key={block.id} className="flex flex-col gap-[14px]">
               <h4 className="text-[#3B48D3] leading-[140%] md:font-semibold font-medium xl:text-[24px] md:text-[20px] text-[18px]">
                 {block.title}
               </h4>
-              {block.contents.map((item: IContentData) => (
+              {block.contents.map((item: IHypothesisContentData) => (
                 <div
                   key={item.id}
                   className="leading-[140%] md:font-normal font-light xl:text-[18px] md:text-[16px] text-[14px]"

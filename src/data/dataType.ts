@@ -25,21 +25,21 @@ export interface IList extends Iid {
 }
 
 // 세부 내용 블럭
-export interface IContentData {
+export interface IHypothesisContentData {
   id: string;
   type: 'text' | 'ol' | 'ul';
   data: Data;
 }
 // 내용 블럭
-export interface IContentBlock extends ITitle {
-  contents: IContentData[];
+export interface IHypothesisContentBlock extends ITitle {
+  contents: IHypothesisContentData[];
 }
 // 검증 블럭
 export interface IContent extends ITitle {
-  contents: IContentBlock[];
+  contents: IHypothesisContentBlock[];
 }
 
-export interface IContentProps {
+export interface IHypothesisContentProps {
   title?: string;
   data: IContent;
 }
