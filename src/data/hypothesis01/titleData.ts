@@ -1,6 +1,6 @@
-import type { IHypothesisTitle } from '../types/IHypothesisTitle';
+import type { IHypothesisTitle } from '../../types/IHypothesisTitle';
 
-export const TitleData: IHypothesisTitle = {
+export const titleData: IHypothesisTitle = {
   number: '01',
   title: '공급-수요 불균형 가설',
   summaryTitle: 'IT 인력 공급이 수요를 초과하여 취업 경쟁이 심화되고 있다',
