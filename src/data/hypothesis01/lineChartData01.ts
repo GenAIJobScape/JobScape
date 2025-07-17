@@ -16,6 +16,7 @@ const {
   lightPink,
   lightGreen,
   red,
+  black,
 } = colorSet;
 
 export const lineChartData01: ILineChartData = {
@@ -37,11 +38,11 @@ export const lineChartData01: ILineChartData = {
     {
       label: '전체 산업기술인력부족률',
       data: [2.5, 2.5, 2.5, 2.6, 2.6],
-      borderColor: '#222',
-      backgroundColor: '#222',
+      borderColor: black,
+      backgroundColor: black,
       tension: 0.3,
-      pointBackgroundColor: '#222',
-      pointBorderColor: '#222',
+      pointBackgroundColor: black,
+      pointBorderColor: black,
       pointStyle: 'triangle',
       pointRadius: 3,
       borderWidth: 2,
@@ -205,7 +206,7 @@ export const lineChartOptions01: ChartOptions<'line'> = {
     title: {
       display: true,
       text: '12대 주력산업 산업인력수급의 부족률 변화',
-      color: '#222',
+      color: black,
       font: {
         size: 16,
         weight: 'bold',
@@ -216,7 +217,7 @@ export const lineChartOptions01: ChartOptions<'line'> = {
       labels: {
         usePointStyle: true,
         pointStyle: 'line',
-        color: '#222',
+        color: black,
         padding: 15,
         font: {
           size: 11,
@@ -239,12 +240,12 @@ export const lineChartOptions01: ChartOptions<'line'> = {
         drawOnChartArea: true,
       },
       ticks: {
-        color: '#222',
+        color: black,
       },
       title: {
         display: true,
         text: '연도',
-        color: '#222',
+        color: black,
       },
     },
     y: {
@@ -258,13 +259,13 @@ export const lineChartOptions01: ChartOptions<'line'> = {
         drawOnChartArea: true,
       },
       ticks: {
-        color: '#222',
+        color: black,
         stepSize: 0.5,
       },
       title: {
         display: true,
         text: '부족률 (%)',
-        color: '#222',
+        color: black,
       },
     },
     y1: {
@@ -277,13 +278,13 @@ export const lineChartOptions01: ChartOptions<'line'> = {
         drawOnChartArea: false,
       },
       ticks: {
-        color: '#222',
+        color: black,
         stepSize: 1,
       },
       title: {
         display: true,
         text: '채용률 (%)',
-        color: '#222',
+        color: black,
       },
     },
   },
