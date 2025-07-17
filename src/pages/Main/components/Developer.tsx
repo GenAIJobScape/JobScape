@@ -12,24 +12,28 @@ interface Idevelopes {
   Designer: IdevelopesData;
 }
 
+interface IProps {
+  isHypothesis?: boolean;
+}
+
 const dummyData1: Idevelopes = {
   DA: {
     data: [
-      { name: '박선영', key: '1' },
-      { name: '이호준', key: '2' },
-      { name: '최나영', key: '3' },
+      { name: '박선영', key: 'a' },
+      { name: '이호준', key: 'b' },
+      { name: '최나영', key: 'c' },
     ],
     role: '데이터분석',
   },
   FE: {
     data: [
-      { name: '민경현', key: '4' },
-      { name: '이한승', key: '5' },
-      { name: '편상건', key: '6' },
+      { name: '민경현', key: '1' },
+      { name: '이한승', key: '2' },
+      { name: '편상건', key: '3' },
     ],
     role: '프론트엔드',
   },
-  Designer: { data: [{ name: '황혜명', key: '7' }], role: '디자인' },
+  Designer: { data: [{ name: '황혜명', key: '가' }], role: '디자인' },
 };
 
 function Member(props: IdevelopesData) {
@@ -52,9 +56,11 @@ function Member(props: IdevelopesData) {
   );
 }
 
-function Developer() {
+function Developer({ isHypothesis }: IProps) {
   return (
-    <section className="box-border flex flex-col items-center bg-[#1E293B] xl:gap-[40px] md:gap-[26px] gap-[18px] xl:pt-[70px] xl:pb-[76px] md:py-[60px] py-[24px]">
+    <section
+      className={`box-border flex flex-col items-center bg-[#1E293B] xl:gap-[40px] md:gap-[26px] gap-[18px] xl:pt-[70px] xl:pb-[76px] md:py-[60px] py-[24px] xl:mt-[297px] md:mt-[258px] mt-[${isHypothesis ? '129px' : '154px'}]`}
+    >
       <h2 className="text-center text-[#E1E1E1] font-[500] md:text-[18px]/[100%] text-[12px]/[100%] ">
         개발진
       </h2>
