@@ -23,8 +23,13 @@ ChartJS.register(
   Legend
 );
 
-function LineChart({ data, options }: ILineChartData) {
-  // 캡처 이미지를 기반으로 한 실제 데이터
+function LineChart({
+  data,
+  options,
+}: {
+  data: ILineChartData;
+  options: ChartOptions<'line'>;
+}) {
   const defaultData = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
@@ -41,7 +46,6 @@ function LineChart({ data, options }: ILineChartData) {
     ],
   };
 
-  // 캡처 이미지와 유사한 옵션 설정
   const defaultOptions: ChartOptions<'line'> = {
     responsive: true,
     maintainAspectRatio: false,

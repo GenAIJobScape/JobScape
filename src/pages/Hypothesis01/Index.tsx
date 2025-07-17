@@ -11,7 +11,7 @@ import {
 } from '../../data/hypothesis01/textContentData';
 import { titleData } from '../../data/hypothesis01/titleData';
 import BarChart from '../../components/BarChart';
-import { barChartData } from '../../data/hypothesis01/barChartData';
+import { barChartData01 } from '../../data/hypothesis01/barChartData01';
 import {
   lineChartData01,
   lineChartOptions01,
@@ -28,7 +28,7 @@ function Hypothesis01() {
         <ContentBlock {...HypothesisData2} />
         <ContentBlock {...HypothesisData3} />
         <ContentBlock {...HypothesisData4} />
-        <BarChart chartData={barChartData} />
+        <BarChart chartData={barChartData01} />
       </PageLayout>
     </>
   );
