@@ -24,22 +24,29 @@ import {
   lineChartData03,
   lineChartOptions03,
 } from '../../data/hypothesis01/lineChartData03';
+import JoinUs from '../Main/components/JoinUs';
+import Developer from '../Main/components/Developer';
 
 function Hypothesis01() {
   return (
     <>
       <Navigation backBtn={true} />
-      <PageLayout>
-        <HypothesisTitle {...titleData} />
-        <LineChart data={lineChartData01} options={lineChartOptions01} />
-        <ContentBlock {...HypothesisData} />
-        <BarChart chartData={barChartData01} />
-        <LineChart data={lineChartData02} options={lineChartOptions02} />
-        <ContentBlock {...HypothesisData2} />
-        <ContentBlock {...HypothesisData3} />
-        <LineChart data={lineChartData03} options={lineChartOptions03} />
-        <ContentBlock {...HypothesisData4} />
-      </PageLayout>
+      {/* 배경 색상을 위한 wrapper */}
+      <div className="bg-[#F8FAFC]">
+        <PageLayout>
+          <HypothesisTitle {...titleData} />
+          <LineChart data={lineChartData01} options={lineChartOptions01} />
+          <ContentBlock {...HypothesisData} />
+          <BarChart chartData={barChartData01} />
+          <LineChart data={lineChartData02} options={lineChartOptions02} />
+          <ContentBlock {...HypothesisData2} />
+          <ContentBlock {...HypothesisData3} />
+          <LineChart data={lineChartData03} options={lineChartOptions03} />
+          <ContentBlock {...HypothesisData4} />
+          <JoinUs isHypothesis={true} />
+        </PageLayout>
+        <Developer isHypothesis={true} />
+      </div>
     </>
   );
 }
