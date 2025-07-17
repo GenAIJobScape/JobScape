@@ -16,4 +16,6 @@ export const colorSet = {
   lightBrown: '#F5DEB3',
   red: '#E74C3C', // 기존보다 강한 빨간색
   black: '#222222', // 기본 검정색
+  grid: '#CCCCCC',
+  white: '#FFFFFF',
 };

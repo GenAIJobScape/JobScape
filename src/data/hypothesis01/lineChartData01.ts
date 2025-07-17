@@ -17,6 +17,8 @@ const {
   lightGreen,
   red,
   black,
+  grid,
+  white,
 } = colorSet;
 
 export const lineChartData01: ILineChartData = {
@@ -228,15 +230,15 @@ export const lineChartOptions01: ChartOptions<'line'> = {
       mode: 'index' as const,
       intersect: false,
       backgroundColor: 'rgba(0, 0, 0, 0.8)',
-      titleColor: '#fff',
-      bodyColor: '#fff',
+      titleColor: white,
+      bodyColor: white,
     },
   },
   scales: {
     x: {
       display: true,
       grid: {
-        color: '#cccccc',
+        color: grid,
         drawOnChartArea: true,
       },
       ticks: {
@@ -255,7 +257,7 @@ export const lineChartOptions01: ChartOptions<'line'> = {
       min: 0,
       max: 4.5,
       grid: {
-        color: '#cccccc',
+        color: grid,
         drawOnChartArea: true,
       },
       ticks: {
@@ -275,6 +277,7 @@ export const lineChartOptions01: ChartOptions<'line'> = {
       min: 90,
       max: 100,
       grid: {
+        color: grid,
         drawOnChartArea: false,
       },
       ticks: {
