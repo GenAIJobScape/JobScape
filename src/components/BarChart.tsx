@@ -9,6 +9,7 @@ import {
   Legend,
 } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import ChartLayout from './ChartLayout';
 
 import type { Plugin, ChartOptions } from 'chart.js';
 
@@ -121,9 +122,9 @@ const BarChart = ({ chartData }: BarChartProps) => {
   };
 
   return (
-    <div className="w-full h-[200px] sm:h-[330px] xl:h-[666px] mt-[30px] sm:mt-[64px] mb-[80px] sm:mb-[140px] xl:mb-[158px] px-[20%] py-[5%] m-auto bg-[#CFD1E766]">
+    <ChartLayout>
       <Bar data={data} options={options} />
-    </div>
+    </ChartLayout>
   );
 };
 

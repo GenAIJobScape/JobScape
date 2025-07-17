@@ -16,6 +16,10 @@ import {
   lineChartData01,
   lineChartOptions01,
 } from '../../data/hypothesis01/lineChartData01';
+import {
+  lineChartData02,
+  lineChartOptions02,
+} from '../../data/hypothesis01/lineChartData02';
 
 function Hypothesis01() {
   return (
@@ -29,6 +33,7 @@ function Hypothesis01() {
         <ContentBlock {...HypothesisData3} />
         <ContentBlock {...HypothesisData4} />
         <BarChart chartData={barChartData01} />
+        <LineChart data={lineChartData02} options={lineChartOptions02} />
       </PageLayout>
     </>
   );

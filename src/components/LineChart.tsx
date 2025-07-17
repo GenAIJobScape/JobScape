@@ -11,6 +11,7 @@ import {
 } from 'chart.js';
 import type { ChartOptions } from 'chart.js';
 import type { ILineChartData } from '../types/ILineChartData';
+import ChartLayout from './ChartLayout';
 
 // Chart.js 컴포넌트 등록
 ChartJS.register(
@@ -87,9 +88,9 @@ function LineChart({
   };
 
   return (
-    <div className="w-full aspect-[1240/666] mt-[64px] bg-white p-[62px]">
+    <ChartLayout>
       <Line data={data || defaultData} options={options || defaultOptions} />
-    </div>
+    </ChartLayout>
   );
 }
 
