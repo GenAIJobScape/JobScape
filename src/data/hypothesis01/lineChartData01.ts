@@ -1,6 +1,6 @@
 import type { ChartOptions } from 'chart.js';
 import type { ILineChartData } from '../../types/ILineChartData';
-import { colorSet } from '../../types/ColorSet';
+import { colorSet } from '../../types/colorSet';
 
 const {
   gray,
