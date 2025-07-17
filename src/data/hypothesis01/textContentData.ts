@@ -1,4 +1,4 @@
-import type { IHypothesisContentProps } from '../dataType';
+import type { IHypothesisContentProps } from '../../types/IHypothesisTextData';
 
 // title 유무에 따라 조건부 렌더링이 되는 title
 export const HypothesisData: IHypothesisContentProps = {

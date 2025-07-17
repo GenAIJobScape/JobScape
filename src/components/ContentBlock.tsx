@@ -3,7 +3,7 @@ import type {
   IHypothesisContentData,
   IHypothesisContentProps,
   ListItemProps,
-} from '../data/dataType';
+} from '../types/IHypothesisTextData';
 
 function ListItem(props: ListItemProps) {
   const olStyle = `ps-[30px] [counter-increment:my-ol] before:content-[counter(my-ol)'.'] before:w-[18px] before:top-0 before:left-0 before:text-[#64748B] before:font-medium before:text-center`;
