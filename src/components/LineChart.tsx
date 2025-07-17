@@ -10,6 +10,7 @@ import {
   Legend,
 } from 'chart.js';
 import type { ChartOptions } from 'chart.js';
+import type { ILineChartData } from '../types/ILineChartData';
 
 // Chart.js 컴포넌트 등록
 ChartJS.register(
@@ -22,23 +23,7 @@ ChartJS.register(
   Legend
 );
 
-interface LineChartProps {
-  data?: {
-    labels: string[];
-    datasets: {
-      label: string;
-      data: number[];
-      borderColor?: string;
-      backgroundColor?: string;
-      tension?: number;
-    }[];
-  };
-  options?: ChartOptions<'line'>;
-  width?: number;
-  height?: number;
-}
-
-function LineChart({ data, options }: LineChartProps) {
+function LineChart({ data, options }: ILineChartData) {
   // 캡처 이미지를 기반으로 한 실제 데이터
   const defaultData = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],

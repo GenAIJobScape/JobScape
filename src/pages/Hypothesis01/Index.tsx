@@ -2,6 +2,7 @@ import ContentBlock from '../../components/ContentBlock';
 import HypothesisTitle from '../../components/HypothesisTitle';
 import Navigation from '../../components/Navigation';
 import PageLayout from '../../components/PageLayout';
+import LineChart from '../../components/LineChart';
 import {
   HypothesisData,
   HypothesisData2,
@@ -11,6 +12,10 @@ import {
 import { titleData } from '../../data/hypothesis01/titleData';
 import BarChart from '../../components/BarChart';
 import { barChartData } from '../../data/hypothesis01/barChartData';
+import {
+  lineChartData01,
+  lineChartOptions01,
+} from '../../data/hypothesis01/lineChartData01';
 
 function Hypothesis01() {
   return (
@@ -18,6 +23,7 @@ function Hypothesis01() {
       <Navigation backBtn={true} />
       <PageLayout>
         <HypothesisTitle {...titleData} />
+        <LineChart data={lineChartData01} options={lineChartOptions01} />
         <ContentBlock {...HypothesisData} />
         <ContentBlock {...HypothesisData2} />
         <ContentBlock {...HypothesisData3} />
