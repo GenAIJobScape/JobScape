@@ -10,6 +10,7 @@ import {
   Legend,
 } from 'chart.js';
 import type { ChartOptions } from 'chart.js';
+import annotationPlugin from 'chartjs-plugin-annotation';
 import type { ILineChartData } from '../types/ILineChartData';
 import ChartLayout from './ChartLayout';
 
@@ -21,7 +22,8 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  annotationPlugin
 );
 
 function LineChart({
