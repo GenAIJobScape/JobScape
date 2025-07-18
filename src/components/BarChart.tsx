@@ -12,6 +12,7 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 import ChartLayout from './ChartLayout';
 
 import type { Plugin, ChartOptions } from 'chart.js';
+import type { IBarChartData } from '../../src/types/IBarChartData';
 
 // 범례와 차트 사이 간격을 만드는 플러그인
 const legendMarginPlugin: Plugin<'bar'> = {
