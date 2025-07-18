@@ -40,88 +40,23 @@ ChartJS.register(
   ChartDataLabels // 플러그인 등록
 );
 
-const options: ChartOptions<'bar'> = {
-  responsive: true,
-  maintainAspectRatio: false,
-  aspectRatio: 4 / 3,
-  plugins: {
-    datalabels: {
-      anchor: 'end',
-      align: 'end',
-      color: '#888',
-      font: {
-        weight: 'bold' as const,
-        size: 13,
-      },
-      formatter: function (value: number) {
-        return value.toLocaleString();
-      },
-    },
-  },
-  scales: {
-    x: {
-      grid: {
-        display: false,
-      },
-      border: {
-        display: true,
-        color: '#333',
-        width: 2,
-      },
-      ticks: {
-        color: '#666',
-        font: {
-          size: 11,
-        },
-      },
-    },
-    y: {
-      beginAtZero: true,
-      grid: {
-        color: '#e5e5e5',
-        lineWidth: 1,
-      },
-      border: {
-        display: false,
-      },
-      ticks: {
-        color: '#666',
-        font: {
-          size: 11,
-        },
-        callback: function (value: string | number) {
-          return Number(value).toLocaleString();
-        },
-      },
-    },
-  },
-};
-
-interface IChartDataType {
-  title: string;
-  label: string;
-  labels: (string | number)[];
-  values: number[];
-  color: string[];
-}
-
 interface BarChartProps {
-  chartData: IChartDataType;
+  chartData: IBarChartData;
+  options: ChartOptions<'bar'>;
 }
 
-const BarChart = ({ chartData }: BarChartProps) => {
+const BarChart = ({ chartData, options }: BarChartProps) => {
   const data = {
     labels: chartData.labels,
     datasets: [
       {
-        title: chartData.title,
         label: chartData.label,
         data: chartData.values,
         backgroundColor: chartData.color,
+        maxBarThickness: 100,
       },
     ],
   };
-
   return (
     <ChartLayout>
       <Bar data={data} options={options} />
