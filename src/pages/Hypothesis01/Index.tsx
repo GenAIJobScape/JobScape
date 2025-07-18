@@ -11,7 +11,10 @@ import {
   HypothesisData4,
 } from '../../data/hypothesis01/textContentData';
 import { titleData } from '../../data/hypothesis01/titleData';
-import { barChartData01 } from '../../data/hypothesis01/barChartData01';
+import {
+  barChartData,
+  barChartOptions,
+} from '../../data/hypothesis01/barChartData01';
 import {
   lineChartData01,
   lineChartOptions01,
@@ -37,7 +40,7 @@ function Hypothesis01() {
           <HypothesisTitle {...titleData} />
           <LineChart data={lineChartData01} options={lineChartOptions01} />
           <ContentBlock {...HypothesisData} />
-          <BarChart chartData={barChartData01} />
+          <BarChart chartData={barChartData} options={barChartOptions} />
           <LineChart data={lineChartData02} options={lineChartOptions02} />
           <ContentBlock {...HypothesisData2} />
           <ContentBlock {...HypothesisData3} />
