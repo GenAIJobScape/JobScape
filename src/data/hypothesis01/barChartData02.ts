@@ -21,6 +21,7 @@ export const barChartData02: IBarChartData = {
 
 export const barChartOptions02: ChartOptions<'bar'> = {
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: { display: true },
     datalabels: {
