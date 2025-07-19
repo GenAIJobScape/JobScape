@@ -25,6 +25,10 @@ import {
 } from '../../data/hypothesis01/lineChartData02';
 import { pieChartData } from '../../data/hypothesis01/pieChartData01';
 import PieChart from '../../components/PieChart';
+import {
+  barChartData02,
+  barChartOptions02,
+} from '../../data/hypothesis01/barChartData02';
 
 import {
   lineChartData03,
@@ -47,6 +51,7 @@ function Hypothesis01() {
           <LineChart data={lineChartData02} options={lineChartOptions02} />
           <ContentBlock {...HypothesisData2} />
           <PieChart chartData={pieChartData} />
+          <BarChart chartData={barChartData02} options={barChartOptions02} />
           <ContentBlock {...HypothesisData3} />
           <LineChart data={lineChartData03} options={lineChartOptions03} />
           <ContentBlock {...HypothesisData4} />
