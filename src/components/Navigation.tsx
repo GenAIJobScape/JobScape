@@ -79,12 +79,21 @@ function Navigation({ backBtn }: { backBtn?: boolean }) {
           </button>
         )}
         <h1 className="">
-          <Link
-            to="/"
-            className={`font-bold leading-[58px] transition-all duration-300 w-[267px] block text-center max-xl:w-[190px] max-xl:leading-11 max-xl:text-2xl`}
-          >
-            <img src={logo} alt="Logo" />
-          </Link>
+          {backBtn ? (
+            <Link
+              to="/"
+              className={`font-bold leading-[58px] transition-all duration-300 w-[267px] block text-center max-xl:w-[190px] max-xl:leading-11 max-xl:text-2xl max-sm:w-[147px] max-sm:hidden`}
+            >
+              <img src={logo} alt="Logo" />
+            </Link>
+          ) : (
+            <Link
+              to="/"
+              className={`font-bold leading-[58px] transition-all duration-300 w-[267px] block text-center max-xl:w-[190px] max-xl:leading-11 max-xl:text-2xl max-sm:w-[147px]`}
+            >
+              <img src={logo} alt="Logo" />
+            </Link>
+          )}
         </h1>
         <ul className="flex gap-[78px] h-full max-xl:gap-6 max-sm:hidden">
           <li className="flex items-center">
