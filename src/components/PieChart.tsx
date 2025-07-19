@@ -2,49 +2,48 @@ import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import type { ChartOptions } from 'chart.js';
 
-// Chart.js 컴포넌트 등록
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+interface IPieChartData {
+  title: string | string[];
+  labels: string[];
+  values: number[];
+  colors: string[];
+}
+
 interface PieChartProps {
-  data?: {
-    labels: string[];
-    datasets: {
-      data: number[];
-      backgroundColor: string[];
-      borderColor?: string[];
-      borderWidth?: number;
-    }[];
-  };
+  chartData: IPieChartData;
   options?: ChartOptions<'pie'>;
   width?: number;
   height?: number;
 }
 
-function PieChart({ data, options }: PieChartProps) {
-  // 캡처 이미지를 기반으로 한 실제 데이터
-  const defaultData = {
-    labels: ['Red', 'Blue', 'Yellow'],
+function PieChart({ chartData, options }: PieChartProps) {
+  const data = {
+    labels: chartData.labels,
     datasets: [
       {
-        data: [60, 15, 25], // 대략적인 비율로 추정
-        backgroundColor: [
-          '#FF6B9D', // 핑크/레드
-          '#4ECDC4', // 블루
-          '#FFD93D', // 옐로우
-        ],
-        borderColor: ['#FF6B9D', '#4ECDC4', '#FFD93D'],
+        label: chartData.labels.join(', '),
+        data: chartData.values,
+        backgroundColor: chartData.colors,
         borderWidth: 0,
       },
     ],
   };
 
-  // 캡처 이미지와 유사한 옵션 설정
   const defaultOptions: ChartOptions<'pie'> = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
+      title: {
+        display: true,
+        text: chartData.title,
+        font: { size: 18, weight: 'bold' },
+        padding: { top: 20, bottom: 10 },
+      },
       legend: {
-        position: 'top' as const,
+        display: true,
+        position: 'top',
         labels: {
           usePointStyle: true,
           pointStyle: 'rect',
@@ -74,7 +73,10 @@ function PieChart({ data, options }: PieChartProps) {
 
   return (
     <div className="w-full aspect-[1240/666] mt-[64px] bg-white p-[62px]">
-      <Pie data={data || defaultData} options={options || defaultOptions} />
+      <Pie
+        data={data}
+        options={(options || defaultOptions) as ChartOptions<'pie'>}
+      />
     </div>
   );
 }
