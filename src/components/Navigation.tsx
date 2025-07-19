@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import CommonBtn from './CommonBtn';
 import arrowLeft from '../assets/arrow-left.svg';
+import logo from '../assets/logo.svg';
 
 function NavBtn({
   text,
@@ -80,9 +81,9 @@ function Navigation({ backBtn }: { backBtn?: boolean }) {
         <h1 className="">
           <Link
             to="/"
-            className={`font-bold leading-[58px] transition-all duration-300 text-[36px] w-[294px] block text-center max-xl:w-[202px] max-xl:leading-11 max-xl:text-2xl`}
+            className={`font-bold leading-[58px] transition-all duration-300 w-[267px] block text-center max-xl:w-[190px] max-xl:leading-11 max-xl:text-2xl`}
           >
-            JobAIScape
+            <img src={logo} alt="Logo" />
           </Link>
         </h1>
         <ul className="flex gap-[78px] h-full max-xl:gap-6 max-sm:hidden">
