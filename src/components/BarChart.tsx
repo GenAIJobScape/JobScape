@@ -48,14 +48,16 @@ interface BarChartProps {
 const BarChart = ({ chartData, options }: BarChartProps) => {
   const data = {
     labels: chartData.labels,
-    datasets: [
-      {
-        label: chartData.label,
-        data: chartData.values,
-        backgroundColor: chartData.color,
-        maxBarThickness: 100,
-      },
-    ],
+    datasets: chartData.datasets
+      ? chartData.datasets
+      : [
+          {
+            label: chartData.label,
+            data: chartData.values,
+            backgroundColor: chartData.color,
+            maxBarThickness: 100,
+          },
+        ],
   };
   return (
     <ChartLayout>
