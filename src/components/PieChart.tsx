@@ -1,6 +1,7 @@
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import type { ChartOptions } from 'chart.js';
+import ChartLayout from './ChartLayout';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -72,12 +73,12 @@ function PieChart({ chartData, options }: PieChartProps) {
   };
 
   return (
-    <div className="w-full aspect-[1240/666] mt-[64px] bg-white p-[62px]">
+    <ChartLayout>
       <Pie
         data={data}
         options={(options || defaultOptions) as ChartOptions<'pie'>}
       />
-    </div>
+    </ChartLayout>
   );
 }
 
