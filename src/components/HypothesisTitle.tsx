@@ -1,4 +1,4 @@
-import type { IHypothesisTitle } from '../data/dataType';
+import type { IHypothesisTitle } from '../types/IHypothesisTitle';
 
 function HypothesisTitle({
   number,
@@ -7,7 +7,7 @@ function HypothesisTitle({
   summaryContents = [],
 }: IHypothesisTitle) {
   return (
-    <section className="pt-[200px] max-md:pt-[100px] max-sm:pt-[54px]">
+    <section className="pt-[200px] max-xl:px-10 max-md:pt-[100px] max-md:px-0 max-sm:pt-[54px]">
       <p className="bg-gradient-to-br from-[#3B48D3] to-[#B0DCFF] bg-clip-text text-transparent font-extrabold text-[64px] leading-normal mb-[14px] max-md:text-[48px] max-sm:text-[30px]">
         {number}
       </p>
@@ -19,7 +19,7 @@ function HypothesisTitle({
           {summaryTitle}
         </h3>
         <ul className="pl-5 flex flex-col gap-6 max-sm:pl-[12px]">
-          {summaryContents.map((content, index) => (
+          {summaryContents.map((content: string, index: number) => (
             <li
               key={index}
               className="flex items-center gap-[18px] max-sm:items-baseline max-sm:gap-[10px]"
