@@ -70,7 +70,10 @@ function Navigation({ backBtn }: { backBtn?: boolean }) {
     >
       <div className="max-w-[1396px] h-full mx-auto flex items-center justify-between max-[1436px]:px-7 max-sm:px-5">
         {backBtn && (
-          <button className="w-7 h-7 hidden max-sm:block">
+          <button
+            className="w-7 h-7 hidden max-sm:block"
+            onClick={() => window.history.back()}
+          >
             <img
               src={arrowLeft}
               alt="back button"
@@ -105,9 +108,13 @@ function Navigation({ backBtn }: { backBtn?: boolean }) {
               className={`hidden absolute -left-[70px] group-hover:block py-5 rounded-2xl bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.1)] w-[270px] top-[70px]`}
             >
               <li className="h-16">
-                <SubNavBtn number="01." text="Test" to="" />
+                <SubNavBtn
+                  number="01."
+                  text="공급-수요 불균형"
+                  to="/hypothesis/01"
+                />
               </li>
-              <li className="h-16">
+              {/* <li className="h-16">
                 <SubNavBtn number="02." text="Test" to="" />
               </li>
               <li className="h-16">
@@ -115,7 +122,7 @@ function Navigation({ backBtn }: { backBtn?: boolean }) {
               </li>
               <li className="h-16">
                 <SubNavBtn number="04." text="Test" to="" />
-              </li>
+              </li> */}
             </ul>
           </li>
           <li className="flex items-center">
@@ -123,7 +130,11 @@ function Navigation({ backBtn }: { backBtn?: boolean }) {
           </li>
         </ul>
         <div className="max-sm:hidden">
-          <CommonBtn text={'기여하기'} />
+          <CommonBtn
+            text={'기여하기'}
+            href="https://github.com/GenAIJobScape/JobScape"
+            target="_blank"
+          />
         </div>
       </div>
     </nav>
