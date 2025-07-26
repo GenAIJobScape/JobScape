@@ -59,7 +59,7 @@ function Member(props: IdevelopesData) {
 function Developer({ isHypothesis }: IProps) {
   return (
     <section
-      className={`box-border flex flex-col items-center bg-[#1E293B] xl:gap-[40px] md:gap-[26px] gap-[18px] xl:pt-[70px] xl:pb-[76px] md:py-[60px] py-[24px] xl:mt-[297px] md:mt-[258px] mt-[${isHypothesis ? '129px' : '154px'}]`}
+      className={`box-border flex flex-col items-center bg-[#1E293B] xl:gap-[40px] md:gap-[26px] gap-[18px] xl:pt-[70px] xl:pb-[76px] md:py-[60px] py-[24px] xl:mt-[297px] md:mt-[258px]  ${isHypothesis ? 'mt-[129px]' : 'mt-[154px]'}`}
     >
       <h2 className="text-center text-[#E1E1E1] font-[500] md:text-[18px]/[100%] text-[12px]/[100%] ">
         개발진
