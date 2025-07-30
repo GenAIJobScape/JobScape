@@ -36,7 +36,6 @@ import {
 } from '../../data/hypothesis01/lineChartData03';
 import JoinUs from '../Main/components/JoinUs';
 import Developer from '../Main/components/Developer';
-import ChartGrid from './components/ChartGrid';
 
 function Hypothesis01() {
   return (
@@ -51,10 +50,6 @@ function Hypothesis01() {
           <BarChart chartData={barChartData} options={barChartOptions} />
           <LineChart data={lineChartData02} options={lineChartOptions02} />
           <ContentBlock {...HypothesisData2} />
-          <ChartGrid
-            pieData={pieChartData}
-            barData={barChartData02}
-            barOptions={barChartOptions02}/>
           <PieChart chartData={pieChartData} />
           <BarChart chartData={barChartData02} options={barChartOptions02} />
           <ContentBlock {...HypothesisData3} />
