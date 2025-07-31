@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import CommonBtn from './CommonBtn';
 import arrowLeft from '../assets/arrow-left.svg';
@@ -45,6 +46,8 @@ function SubNavBtn({
 }
 
 function Navigation({ backBtn }: { backBtn?: boolean }) {
+  const navigate = useNavigate();
+
   // 개요 버튼 클릭 핸들러 (실시간 화면 크기 체크)
   const handleOverviewClick = () => {
     const isMobile = window.innerWidth < 1396;
@@ -72,7 +75,7 @@ function Navigation({ backBtn }: { backBtn?: boolean }) {
         {backBtn && (
           <button
             className="w-7 h-7 hidden max-sm:block"
-            onClick={() => window.history.back()}
+            onClick={() => navigate(-1)}
           >
             <img
               src={arrowLeft}
