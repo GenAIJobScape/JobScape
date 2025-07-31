@@ -78,7 +78,7 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
       flex 
       items-center 
       gap-[4px] md:gap-[8px]
-    `,children:[H.jsx("span",{className:`w-[10px] md:w-[16px] h-[10px] md:h-[16px] ${t} rounded-full`}),H.jsx("span",{className:"text-white text-[10px] md:text-[16px] font-['Pretendard Variable'] font-normal leading-[100%]",children:n})]})}function aS({number:n,title:t,desc:i,status:l}){return H.jsxs(Fi,{to:"/",className:`
+    `,children:[H.jsx("span",{className:`w-[10px] md:w-[16px] h-[10px] md:h-[16px] ${t} rounded-full`}),H.jsx("span",{className:"text-white text-[10px] md:text-[16px] font-['Pretendard Variable'] font-normal leading-[100%]",children:n})]})}function aS({number:n,title:t,desc:i,status:l}){return H.jsxs(Fi,{to:l==="분석 완료"?`/hypothesis/${n}`:"",className:`
         w-[325px] md:w-[280px] xl:w-[402px]
         h-[40px] md:h-[290px] xl:h-[412px]
         rounded-[40px]
