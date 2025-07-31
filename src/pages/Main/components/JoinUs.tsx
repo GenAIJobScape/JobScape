@@ -4,6 +4,7 @@ interface Iobject1 {
   url: string;
   text: string;
   key: number;
+  target?: string;
 }
 
 interface IProps {
@@ -15,6 +16,7 @@ const joinUsUrls: Iobject1[] = [
     url: 'https://github.com/GenAIJobScape/JobScape',
     text: '기여하기',
     key: 0,
+    target: '_blank',
   },
   { url: '#', text: '가설 제안하기', key: 1 },
 ];
@@ -23,7 +25,12 @@ function InteractionEl() {
   return (
     <div className="flex justify-center whitespace-nowrap xl:gap-[18px] xl:w-[305px] gap-[10px]">
       {joinUsUrls.map((data) => (
-        <CommonBtn key={data.key} href={data.url} text={data.text}></CommonBtn>
+        <CommonBtn
+          key={data.key}
+          href={data.url}
+          text={data.text}
+          target={data.target ? data.target : ''}
+        ></CommonBtn>
       ))}
     </div>
   );
