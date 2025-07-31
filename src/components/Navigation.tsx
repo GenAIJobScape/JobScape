@@ -1,5 +1,5 @@
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import CommonBtn from './CommonBtn';
 import arrowLeft from '../assets/arrow-left.svg';
 import logo from '../assets/logo.svg';
@@ -33,20 +33,25 @@ function SubNavBtn({
   to?: string;
 }) {
   return (
-    <Link
-      to={to ? to : ''}
-      className="w-full h-full flex gap-5 hover:bg-[#F1F3FF] px-7 items-center"
-    >
-      <span className="font-medium text-[18px] text-[#A2A3B5] max-md:text-[16px]">
-        {number}
-      </span>
-      <span className="font-medium text-[18px] max-md:text-[16px]">{text}</span>
-    </Link>
+    <li className="h-16">
+      <Link
+        to={to ? to : ''}
+        className="w-full h-full flex gap-5 hover:bg-[#F1F3FF] px-7 items-center"
+      >
+        <span className="font-medium text-[18px] text-[#A2A3B5] max-md:text-[16px]">
+          {number}
+        </span>
+        <span className="font-medium text-[18px] max-md:text-[16px]">
+          {text}
+        </span>
+      </Link>
+    </li>
   );
 }
 
 function Navigation({ backBtn }: { backBtn?: boolean }) {
   const navigate = useNavigate();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   // 개요 버튼 클릭 핸들러 (실시간 화면 크기 체크)
   const handleOverviewClick = () => {
@@ -65,6 +70,16 @@ function Navigation({ backBtn }: { backBtn?: boolean }) {
       top: document.documentElement.scrollHeight,
       behavior: 'smooth',
     });
+  };
+
+  // 핵심 가설 버튼 클릭 핸들러
+  const handleCoreHypothesisClick = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  // 드롭다운 외부 클릭 시 닫기
+  const handleDropdownBlur = () => {
+    setTimeout(() => setIsDropdownOpen(false), 150);
   };
 
   return (
@@ -105,27 +120,23 @@ function Navigation({ backBtn }: { backBtn?: boolean }) {
           <li className="flex items-center">
             <NavBtn text={'개요'} onClick={handleOverviewClick} />
           </li>
-          <li className="relative group h-full flex items-center">
-            <NavBtn text={'핵심 가설'} groupHover={true} />
+          <li
+            className="relative group h-full flex items-center"
+            onBlur={handleDropdownBlur}
+          >
+            <NavBtn
+              text={'핵심 가설'}
+              groupHover={true}
+              onClick={handleCoreHypothesisClick}
+            />
             <ul
-              className={`hidden absolute -left-[70px] group-hover:block py-5 rounded-2xl bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.1)] w-[270px] top-[70px]`}
+              className={`${isDropdownOpen ? 'block' : 'hidden'} absolute -left-[70px] group-hover:block py-5 rounded-2xl bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.1)] w-[270px] top-[70px]`}
             >
-              <li className="h-16">
-                <SubNavBtn
-                  number="01."
-                  text="공급-수요 불균형"
-                  to="/hypothesis/01"
-                />
-              </li>
-              {/* <li className="h-16">
-                <SubNavBtn number="02." text="Test" to="" />
-              </li>
-              <li className="h-16">
-                <SubNavBtn number="03." text="Test" to="" />
-              </li>
-              <li className="h-16">
-                <SubNavBtn number="04." text="Test" to="" />
-              </li> */}
+              <SubNavBtn
+                number="01."
+                text="공급-수요 불균형"
+                to="/hypothesis/01"
+              />
             </ul>
           </li>
           <li className="flex items-center">
