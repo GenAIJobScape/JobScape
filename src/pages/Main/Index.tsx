@@ -1,7 +1,7 @@
 import Navigation from '../../components/Navigation';
 import Developer from './components/Developer';
 import Why from './components/Why';
-import Hypothesis from './components/Hypothesis';
+import Hypothesis from './components/Hypothesis/Hypothesis';
 import JoinUs from './components/JoinUs';
 
 function Main() {

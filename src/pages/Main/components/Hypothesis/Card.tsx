@@ -1,6 +1,6 @@
 //분석 상태 컴포넌트 가져오기
 import { Link } from 'react-router-dom';
-import StatusBadge from './StatusBadge.tsx';
+import StatusBadge from './StatusBadge';
 
 //카드에 입력할 내용 받아오는 부분 선언
 export interface ICardProps {
@@ -13,7 +13,7 @@ export interface ICardProps {
 export default function Card({ number, title, desc, status }: ICardProps) {
   return (
     <Link
-      to="/"
+      to={status === '분석 완료' ? `/hypothesis/${number}` : ''}
       className="
         w-[325px] md:w-[280px] xl:w-[402px]
         h-[40px] md:h-[290px] xl:h-[412px]
