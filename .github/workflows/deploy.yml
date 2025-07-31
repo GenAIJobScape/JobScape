@@ -32,4 +32,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           # 아래 옵션은 필요에 따라 추가
-          # cname: www.job-ai.co.kr
+          cname: www.job-ai.co.kr
