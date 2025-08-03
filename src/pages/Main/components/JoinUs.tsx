@@ -18,7 +18,7 @@ const joinUsUrls: Iobject1[] = [
     key: 0,
     target: '_blank',
   },
-  { url: '#', text: '가설 제안하기', key: 1 },
+  { url: 'mailto:paul-lab@naver.com', text: '가설 제안하기', key: 1 },
 ];
 
 function InteractionEl() {
