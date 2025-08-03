@@ -3,6 +3,7 @@ import Main from './pages/Main/Index';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Hypothesis01 from './pages/Hypothesis01/Index';
+import Hypothesis02 from './pages/Hypothesis02/Index';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/hypothesis/01" element={<Hypothesis01 />} />
+        <Route path="/hypothesis/02" element={<Hypothesis02 />} />
       </Routes>
       <Footer />
     </Router>
