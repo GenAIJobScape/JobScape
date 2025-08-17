@@ -18,7 +18,7 @@ const cardsData: ICardProps[] = [
     number: '03',
     title: 'AI 대체 위협 인식',
     desc: 'AI 기술 발전으로 인한 일자리 대체 우려가 IT 채용 시장을 위축시키고 있다',
-    status: '분석 중',
+    status: '분석 완료',
   },
   // {
   //   number: '04',
