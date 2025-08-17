@@ -129,7 +129,7 @@ Please change the parent <Route path="${E}"> to <Route path="${E==="/"?"*":`${E}
         grid-cols-1 md:grid-cols-2 xl:grid-cols-3
         gap-[clamp(18px,4vw,84px)]
         px-[clamp(16px,4vw,64px)]
-        `,children:e.map(t=>k.jsx(cS,{...t},t.number))})}const dS=[{number:"01",title:"공급-수요 불균형",desc:"IT 인력 공급이 수요를 초과하여 취업 경쟁이 심화되고 있다",status:"분석 완료"},{number:"02",title:"경력-신입 격차",desc:"신입 개발자 취업은 어려워졌지만, 경력자 수요는 여전히 높다",status:"분석 중"},{number:"03",title:"AI 대체 위협 인식",desc:"AI 기술 발전으로 인한 일자리 대체 우려가 IT 채용 시장을 위축시키고 있다",status:"분석 중"}];function hS(){return k.jsxs("section",{className:`
+        `,children:e.map(t=>k.jsx(cS,{...t},t.number))})}const dS=[{number:"01",title:"공급-수요 불균형",desc:"IT 인력 공급이 수요를 초과하여 취업 경쟁이 심화되고 있다",status:"분석 완료"},{number:"02",title:"경력-신입 격차",desc:"신입 개발자 취업은 어려워졌지만, 경력자 수요는 여전히 높다",status:"분석 중"},{number:"03",title:"AI 대체 위협 인식",desc:"AI 기술 발전으로 인한 일자리 대체 우려가 IT 채용 시장을 위축시키고 있다",status:"분석 완료"}];function hS(){return k.jsxs("section",{className:`
     flex 
     items-center 
     flex-col 
