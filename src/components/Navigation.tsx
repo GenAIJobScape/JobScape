@@ -137,6 +137,11 @@ function Navigation({ backBtn }: { backBtn?: boolean }) {
                 text="공급-수요 불균형"
                 to="/hypothesis/01"
               />
+              <SubNavBtn
+                number="03."
+                text="AI 대체 위협 인식"
+                to="/hypothesis/03"
+              />
             </ul>
           </li>
           <li className="flex items-center">
