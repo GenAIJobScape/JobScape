@@ -30,7 +30,9 @@ function Content(props: IHypothesisContentData) {
       <ol className="flex flex-col xl:gap-[24px] md:gap-[20px] gap-[12px] md:mx-[30px] mx-[20px] [counter-reset:my-ol]">
         {data.map((li) => (
           <ListItem id={li.id} isOrd={true}>
-            {li.item}
+            {typeof li.item === 'object' && li.item !== null
+              ? <Content {...(li.item as IHypothesisContentData)} />
+              : li.item}
           </ListItem>
         ))}
       </ol>
@@ -39,7 +41,9 @@ function Content(props: IHypothesisContentData) {
         {data.map((li) => (
           // <li key={li.id}>{li.item}</li>
           <ListItem id={li.id} isOrd={false}>
-            {li.item}
+            {typeof li.item === 'object' && li.item !== null
+              ? <Content {...(li.item as IHypothesisContentData)} />
+              : li.item}
           </ListItem>
         ))}
       </ul>
