@@ -25,11 +25,13 @@ export interface IHypothesisContentData {
 }
 // 내용 블럭
 export interface IHypothesisContentBlock extends ITitle {
+  type?: 'text' | 'ol' | 'ul';
   contents: IHypothesisContentData[];
 }
 // 검증 블럭
 export interface IContent extends ITitle {
   contents: IHypothesisContentBlock[];
+  type?: 'text' | 'ol' | 'ul';
 }
 
 export interface IHypothesisContentProps {
