@@ -104,6 +104,7 @@ export const HypothesisData4: IHypothesisContentProps = {
   data: {
     id: 'comprehensive-analysis-conclusion',
     title: '종합 분석 및 결론 도출',
+    type: 'ol',
     contents: [
       {
         id: 'hypothesis-verification-result',
