@@ -107,7 +107,7 @@ export const HypothesisData4: IHypothesisContentProps = {
     type: 'ol',
     contents: [
       {
-        id: 'hypothesis-verification-result',
+        id: 'hypothesis-verification-result-1',
         title: '1. AI 대체 위협 인식의 확산',
         contents: [
           {
@@ -127,7 +127,7 @@ export const HypothesisData4: IHypothesisContentProps = {
         ],
       },
       {
-        id: 'hypothesis-verification-result',
+        id: 'hypothesis-verification-result-2',
         title: '2. 구직자 행동 변화',
         contents: [
           {
@@ -143,7 +143,7 @@ export const HypothesisData4: IHypothesisContentProps = {
         ],
       },
       {
-        id: 'hypothesis-verification-result',
+        id: 'hypothesis-verification-result-3',
         title: '3. 실제 IT 직무 채용 감소',
         contents: [
           {
@@ -159,7 +159,7 @@ export const HypothesisData4: IHypothesisContentProps = {
         ],
       },
       {
-        id: 'hypothesis-verification-result',
+        id: 'hypothesis-verification-result-4',
         title: '4. 시사점',
         contents: [
           {
