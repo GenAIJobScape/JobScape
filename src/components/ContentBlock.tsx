@@ -1,3 +1,4 @@
+import React from 'react';
 import type {
   IHypothesisContentBlock,
   IHypothesisContentData,
@@ -25,28 +26,23 @@ function Content(props: IHypothesisContentData) {
   if (type === 'text' && typeof data === 'string') {
     return <p>{data}</p>;
   } else if (typeof data === 'object') {
-    // ol과 ul 처리
-    return type === 'ol' ? (
-      <ol className="flex flex-col xl:gap-[24px] md:gap-[20px] gap-[12px] md:mx-[30px] mx-[20px] [counter-reset:my-ol]">
-        {data.map((li) => (
-          <ListItem id={li.id} isOrd={true}>
+    const ListTag = type === 'ol' ? 'ol' : 'ul';
+    const isOrd = type === 'ol';
+    const listClass = isOrd
+      ? 'flex flex-col xl:gap-[24px] md:gap-[20px] gap-[12px] md:mx-[30px] mx-[20px] [counter-reset:my-ol]'
+      : 'flex flex-col xl:gap-[24px] md:gap-[20px] gap-[12px] md:mx-[30px] mx-[20px]';
+    return (
+      React.createElement(
+        ListTag,
+        { className: listClass },
+        data.map((li: any) => (
+          <ListItem key={li.id} id={li.id} isOrd={isOrd}>
             {typeof li.item === 'object' && li.item !== null
               ? <Content {...(li.item as IHypothesisContentData)} />
               : li.item}
           </ListItem>
-        ))}
-      </ol>
-    ) : (
-      <ul className="flex flex-col xl:gap-[24px] md:gap-[20px] gap-[12px] md:mx-[30px] mx-[20px]">
-        {data.map((li) => (
-          // <li key={li.id}>{li.item}</li>
-          <ListItem id={li.id} isOrd={false}>
-            {typeof li.item === 'object' && li.item !== null
-              ? <Content {...(li.item as IHypothesisContentData)} />
-              : li.item}
-          </ListItem>
-        ))}
-      </ul>
+        ))
+      )
     );
   }
   return null;
@@ -66,23 +62,31 @@ function ContentBlock(props: IHypothesisContentProps) {
         <h3 className="leading-[100%] md:font-bold font-semibold xl:text-[32px] md:text-[28px] text-[20px]">
           {props.data.title}
         </h3>
-        <div className="flex flex-col md:gap-[64px] gap-[40px]">
-          {props.data.contents.map((block: IHypothesisContentBlock) => (
-            <div key={block.id} className="flex flex-col gap-[14px]">
-              <h4 className="text-[#3B48D3] leading-[140%] md:font-semibold font-medium xl:text-[24px] md:text-[20px] text-[18px]">
-                {block.title}
-              </h4>
-              {block.contents.map((item: IHypothesisContentData) => (
-                <div
-                  key={item.id}
-                  className="leading-[140%] md:font-normal font-light xl:text-[18px] md:text-[16px] text-[14px]"
-                >
-                  <Content {...item} />
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
+        {(() => {
+          const ContainerTag = props.data.type === 'ol' ? 'ol'
+            : props.data.type === 'ul' ? 'ul'
+            : 'div';
+          const containerClass = "flex flex-col md:gap-[64px] gap-[40px]";
+          return React.createElement(
+            ContainerTag,
+            { className: containerClass },
+            props.data.contents.map((block: IHypothesisContentBlock) => (
+              <div key={block.id} className="flex flex-col gap-[14px]">
+                <h4 className="text-[#3B48D3] leading-[140%] md:font-semibold font-medium xl:text-[24px] md:text-[20px] text-[18px]">
+                  {block.title}
+                </h4>
+                {block.contents.map((item: IHypothesisContentData) => (
+                  <div
+                    key={item.id}
+                    className="leading-[140%] md:font-normal font-light xl:text-[18px] md:text-[16px] text-[14px]"
+                  >
+                    <Content {...item} />
+                  </div>
+                ))}
+              </div>
+            ))
+          );
+        })()}
       </div>
     </section>
   );
