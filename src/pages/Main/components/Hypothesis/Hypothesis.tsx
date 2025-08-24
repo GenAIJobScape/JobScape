@@ -12,7 +12,7 @@ const cardsData: ICardProps[] = [
     number: '02',
     title: '경력-신입 격차',
     desc: '신입 개발자 취업은 어려워졌지만, 경력자 수요는 여전히 높다',
-    status: '분석 중',
+    status: '분석 완료',
   },
   {
     number: '03',
