@@ -29,6 +29,16 @@ import {
   barChartOptions03,
 } from '../../data/hypothesis02/barChartData03';
 
+import {
+  barChartDataGrouped,
+  barChartOptionsGrouped,
+} from '../../data/hypothesis02/barChartData04';
+
+import {
+  barChartDataGrouped02,
+  barChartOptionsGrouped02,
+} from '../../data/hypothesis02/barChartData05';
+
 function Hypothesis02() {
   return (
     <>
@@ -47,12 +57,22 @@ function Hypothesis02() {
           <BarChart chartData={barChartData03} options={barChartOptions03} />
           <ContentBlock {...HypothesisData4} />
 
+          <BarChart
+            chartData={barChartDataGrouped}
+            options={barChartOptionsGrouped}
+          />
           <ContentBlock {...HypothesisData5} />
 
+          <BarChart
+            chartData={barChartDataGrouped02}
+            options={barChartOptionsGrouped02}
+          />
           <ContentBlock {...HypothesisData6} />
 
           <ContentBlock {...HypothesisData7} />
+          <JoinUs isHypothesis={true} />
         </PageLayout>
+        <Developer isHypothesis={true} />
       </div>
     </>
   );
